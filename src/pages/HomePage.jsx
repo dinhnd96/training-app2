@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button'
 import CardProduct from '../component/CardProduct'
 import Calendar from '../component/Calendar'
 import celendar from '../assets/calendar-alt-solid.svg'
+import AddValue from './AddValue'
 function HomePage() {
     return (
         <Container>
@@ -12,7 +13,7 @@ function HomePage() {
             <NavBarPage />
             <Container className="d-flex">
                 <div className="Right-page">
-                    <div className="Add-item-btn d-flex justify-content-end">
+                    <div className="Add-item-btn d-flex justify-content-end mr-10">
                         <Button variant="primary" type="submit">
                             THÊM MỚI ĐỒ VẬT
                         </Button>
@@ -31,12 +32,12 @@ function HomePage() {
                 </div>
                 <div className="Left-page">
                     <div className="Left-page-head d-flex">
-                        <a className="" href="#"><img src={celendar} width="50"></img></a>
-                        <span className="" >JUNE</span>
+                        <a className="mr-10" href="#"><img src={celendar} width="50"></img></a>
+                        <h1>JUNE</h1>
                     </div>
                     <Calendar />
                     <div className="home-page-content-out-of-date">
-                        <h3>SẢN PHẨM SẮP HẾT HẠN</h3>
+                        <h5>SẢN PHẨM SẮP HẾT HẠN</h5>
                         <ul>
                             <li>Bàn ghế tròn - 14/07/2020</li>
                             <li>Bàn ghế tròn - 14/07/2020</li>
@@ -45,7 +46,7 @@ function HomePage() {
                         </ul>
                     </div>
                     <div className="home-page-content-contructor">
-                        <h3>CẤU TRÚC PHÒNG CỦA TÔI</h3>
+                        <h5>CẤU TRÚC PHÒNG CỦA TÔI</h5>
                         <div className="home-page-content-contructor-img">
                         </div>
                         <div className="bottom-0">
@@ -55,6 +56,7 @@ function HomePage() {
 
                 </div>
             </Container>
+            <AddValue/>
         </Container>
     )
 }

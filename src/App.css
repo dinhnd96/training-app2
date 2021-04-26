@@ -1,4 +1,6 @@
-
+.mr-10 {
+  margin-right: 10px !important;
+}
 
 .App-logo {
   height: 40vmin;
@@ -140,8 +142,18 @@ body {font-family: Verdana, sans-serif;}
 .days li .blur {
     color:#cfd8d5;
 }
+/* Page main*/
+.Right-page {
+  border-right: 10px solid #eee;
+}
+.Left-page {
+  margin-left: 20px;
+}
 .Left-page-head {
   align-items: center;
+}
+.Left-page h5 {
+  text-align: center;
 }
 
 .home-page-content-out-of-date li {
@@ -158,6 +170,10 @@ body {font-family: Verdana, sans-serif;}
   width:400px;
   height:400px;
 
+
+}
+.home-page-content-contructor p{
+  text-align: center;
 }
 /* Product*/
 .CardProduct {
@@ -188,18 +204,126 @@ body {font-family: Verdana, sans-serif;}
   margin-top:40px;
   box-shadow: -3px 4px 5px  rgb(148, 148, 148);
   margin-right: 20px;
+  width: 20%;
 }
 .Product-img {
   background-image: url(https://webcaycanh.com/wp-content/uploads/2020/08/cay-xuong-rong-bong-gon.jpg);
-  width:200px;
-  height:200px;
+  width:120px;
+  height:120px;
   background-size:cover;
   background-origin: content-box;
+  margin:auto;
 }
 .Product-content {
   padding:20px;
+  
 }
 .Product-content span {
   border-radius: 8px;
   border: 1px solid rgb(54, 54, 54);
+}
+.Product-content-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 20px;
+}
+.Navbar-Page {
+  width:61.8%;
+}
+
+/* add items */
+
+.addvalue-dashboard {
+  position: relative;
+    top: -846px;
+    /* left: 0px; */
+    width: 1200px;
+    height: 800px;
+    background-color: #f1f1f1;
+    display: flex;
+    padding: 30px;
+    flex-wrap: wrap;
+    display: none;
+}
+.addvalue-dashboard-title {
+  position: absolute;
+}
+.addvalue-dashboard-close {
+  width:20px;
+  height:20px;
+  position: relative;
+  left:1115px;
+}
+.addvalue-dashboard-close-image {
+  width:20px;
+  height:20px;
+  position: relative;
+  left:1015px;
+  top:100px;
+}
+.addvalue-dashboard-left {
+  margin-top: 50px;
+}
+
+.addvalue-dashboard-left-input input {
+  min-width: 500px;
+}
+.addvalue-dashboard-right {
+  background-image: url(https://cb.scene7.com/is/image/Crate/EllaWhiteTableLampOffSHF15);
+  background-size: cover;
+  width: 500px;
+  height: 387px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+.addvalue-dashboard-middle {
+  width:500px;
+}
+.addvalue-dashboard-middle input {
+  width:1046px;
+  height:100px;
+  border-radius:20px;
+
+}
+.addvalue-dashboard-bottom {
+  width: 92%;
+  justify-content: space-between;
+  display: flex;
+}
+.addvalue-dashboard-left-input-icon {
+  width:30px;
+  height:30px;
+
+  
+}
+.addvalue-dashboard-left-input a {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 500px;
+  top: 400px;
+}
+.addvalue-dashboard-bottom ::after {
+  content:"";
+  width:1000px;
+  height:5px;
+  background-color:red;
+}
+
+
+/* icon input*/
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon { 
+  padding: 10px 0 10px 0;
+  min-width: 50px;
+  text-align: center;
 }
