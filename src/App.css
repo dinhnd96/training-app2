@@ -1,10 +1,58 @@
+.vh-100 {
+  height:100vh !important;
+}
+.h-80 {
+  height: 80% !important;
+}
 .mr-10 {
   margin-right: 10px !important;
 }
-
+.pb-10 {
+  padding-bottom: 10px !important;
+}
+.pb-20 {
+  padding-bottom: 20px !important;
+}
+.pb-40 {
+  padding-bottom: 40px !important;
+}
+.pt-60 {
+  padding-top: 60px !important;
+}
+.pt-20 {
+  padding-top: 20px !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.mw-150 {
+  min-width: 150px !important;
+}
+.mw-400 {
+  min-width: 400px !important;
+}
+.mw-300 {
+  min-width: 300px !important;
+}
+.text-Warning {
+  color:orange;
+}
+.text-white {
+  color: white;
+}
+.w-70 {
+  max-width: 70% !important;
+}
+.fs-15 {
+  font-size: 15px !important;
+}
+.primary-color {
+  color:rgb(97, 97, 97);
+
+}
+.br-20 {
+  border-radius: 20px!important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,22 +84,90 @@
     transform: rotate(360deg);
   }
 }
+/* Logo app*/
+
+.Logo-app h1 {
+  font-size: 80px;
+}
+
+.Logo-app h3 {
+  font-size: 80px;
+}
+/* validaion form*/
 .validation-from {
-  width:300px
+  width:400px;
 }
 .underline {
   border-bottom: 10px solid rgb(131, 39, 39);
-  width:20%;
-  margin:auto;
+  border-bottom: 10px solid rgb(131, 39, 39);
+  width: 20%;
+  margin: auto;
   position: absolute;
-  top:25%;
+  top: 15%;
   left: 40%;
   margin-bottom: 100px;
 }
 .progess-bar {
-  width: 100px;
+  width: 150px;
 }
+.email-icon {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top:375px;
+  right:650px;
 
+}
+.password-icon {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top:428px;
+  right:650px;
+
+}
+.password-confimation-icon {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top:375px;
+  right:650px;
+
+}
+.email-iconR {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top:375px;
+  right:660px;
+
+}
+.password-iconR {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top:438px;
+  right:660px;
+
+}
+.password-confimation-iconR {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top:502px;
+  right:660px;
+
+}
+.form-email {
+  text-indent: 30px;
+}
+.form-password {
+  text-indent: 30px;
+}
+.form-password-confimation {
+  text-indent: 30px;
+}
+/* */
 .sidenav {
   height: 100%;
   width: 160px;
@@ -144,7 +260,7 @@ body {font-family: Verdana, sans-serif;}
 }
 /* Page main*/
 .Right-page {
-  border-right: 10px solid #eee;
+  border-right: 2px solid rgb(59, 59, 59);
 }
 .Left-page {
   margin-left: 20px;
@@ -152,7 +268,7 @@ body {font-family: Verdana, sans-serif;}
 .Left-page-head {
   align-items: center;
 }
-.Left-page h5 {
+.Left-page h6 {
   text-align: center;
 }
 
@@ -166,11 +282,15 @@ body {font-family: Verdana, sans-serif;}
   font-size:15px;
 }
 .home-page-content-contructor-img {
-  background-image:url(https://media.istockphoto.com/vectors/office-vector-id1002049972?b=1&k=6&m=1002049972&s=612x612&w=0&h=pb5XBbqB1k9pPfNtPqmXSYf6xXTqeI7qjIB_u1Peh1s=);
-  width:400px;
-  height:400px;
+  display: flex;
+  height: 200px; /* Or whatever */
 
 
+}
+.child {
+  width: 200px;  /* Or whatever */
+  height: 200px; /* Or whatever */
+  margin: auto;  /* Magic! */
 }
 .home-page-content-contructor p{
   text-align: center;
@@ -200,11 +320,10 @@ body {font-family: Verdana, sans-serif;}
 
 .Product {
   border: 1px solid rgb(131, 131, 131);
-  margin-bottom: 20px;
-  margin-top:40px;
+  margin-top:20px;
   box-shadow: -3px 4px 5px  rgb(148, 148, 148);
-  margin-right: 20px;
-  width: 20%;
+  margin-right: 10px;
+  width: 23%;
 }
 .Product-img {
   background-image: url(https://webcaycanh.com/wp-content/uploads/2020/08/cay-xuong-rong-bong-gon.jpg);
@@ -215,19 +334,24 @@ body {font-family: Verdana, sans-serif;}
   margin:auto;
 }
 .Product-content {
-  padding:20px;
-  
+  padding-left:20px;
+
 }
+.Product-content p {
+  white-space: nowrap; 
+  width: 50px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  height:50px;
+  width: 150px;
+  font-size:14px; 
+}
+
 .Product-content span {
   border-radius: 8px;
   border: 1px solid rgb(54, 54, 54);
 }
-.Product-content-text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 20px;
-}
+
 .Navbar-Page {
   width:61.8%;
 }
@@ -244,10 +368,12 @@ body {font-family: Verdana, sans-serif;}
     display: flex;
     padding: 30px;
     flex-wrap: wrap;
-    display: none;
+    border-radius: 20px;
+
 }
 .addvalue-dashboard-title {
   position: absolute;
+  color:rgb(0, 195, 255);
 }
 .addvalue-dashboard-close {
   width:20px;
@@ -290,19 +416,22 @@ body {font-family: Verdana, sans-serif;}
   width: 92%;
   justify-content: space-between;
   display: flex;
+  border-top: 2px solid #282c34;
+  padding-top: 15px;
 }
-.addvalue-dashboard-left-input-icon {
-  width:30px;
-  height:30px;
-
-  
-}
-.addvalue-dashboard-left-input a {
+.addvalue-dashboard-left-input .addvalue-dashboard-left-input-icon {
   width: 12px;
   height: 12px;
   position: absolute;
   left: 500px;
   top: 400px;
+}
+.addvalue-dashboard-left-input .addvalue-dashboard-left-input-icon2 {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 500px;
+  top: 470px;
 }
 .addvalue-dashboard-bottom ::after {
   content:"";
@@ -327,3 +456,4 @@ body {font-family: Verdana, sans-serif;}
   min-width: 50px;
   text-align: center;
 }
+

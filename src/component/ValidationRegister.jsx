@@ -3,23 +3,32 @@ import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import LogoApp from './logo'
 import ProgressBar from 'react-bootstrap/ProgressBar'
+import user from '../assets/users-solid.svg'
+import key from '../assets/key-solid.svg'
 function Validation1() {
     return (
-        <Container className="d-flex m-auto justify-content-center">
+        <Container className="d-flex m-auto justify-content-center h-80">
             <Form className="validation-from">
                 <LogoApp />
-                <Form.Group controlId="formBasicEmail">
-                    <Form.Control type="email" placeholder="Tên tài khoản" />
-                </Form.Group>
+                <div className="">
+                    <Form.Group className="pb-10" controlId="formBasicEmail">
+                    <a className="email-iconR" href="#"><img src={user}></img></a>
+                        <Form.Control className="form-email" type="email" placeholder="Tên tài khoản" />
+                    </Form.Group>
 
-                <Form.Group controlId="formBasicPassword">
-                    <Form.Control type="password" placeholder="Mật khẩu" />
-                </Form.Group>
+                    <Form.Group className="pb-10" controlId="formBasicPassword">
+                    <a className="password-iconR" href="#"><img src={key}></img></a>
+                        <Form.Control className="form-password" type="password" placeholder="Mật khẩu" />
+                    </Form.Group>
 
-                <Form.Group controlId="formBasicPassword">
-                    <Form.Control type="password" placeholder="Xác nhận mật khẩu" />
-                </Form.Group>
-                <div className="d-flex justify-content-between align-items-baseline">
+                    <Form.Group className="pb-10" controlId="formBasicPassword">
+                    <a className="password-confimation-iconR" href="#"><img src={key}></img></a>
+                        <Form.Control className="form-password-confimation" type="password" placeholder="Xác nhận mật khẩu" />
+                    </Form.Group>
+
+                </div>
+
+                <div className="d-flex justify-content-between align-items-baseline pb-10">
                     <div>
                         <p>Mật khẩu đặt chuẩn</p>
                     </div>

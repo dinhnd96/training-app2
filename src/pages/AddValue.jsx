@@ -31,8 +31,9 @@ function AddValue() {
             <input></input>
           </div>
 
-          <div className="addvalue-dashboard-left-input">
+          <div className="addvalue-dashboard-left-input icon2">
             <p>Lựa chọn công dụng</p>
+            <a className="addvalue-dashboard-left-input-icon2" href="#"><img src={celendar}></img></a>
             <input></input>
           </div>
         </div>

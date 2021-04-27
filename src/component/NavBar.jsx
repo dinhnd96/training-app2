@@ -8,11 +8,11 @@ function NavBarPage() {
     return (
         <Container className="d-flex justify-content-between ">
             <Navbar className="Navbar-Page " bg="light" expand="lg">
-                <Navbar.Brand href="#home">WELCOME TO MY HOME</Navbar.Brand>
+                <Navbar.Brand href="#home" className="text-primary">WELCOME TO MY HOME</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 
-                    <Form inline >
-                        <FormControl width="48"  type="text" placeholder="Search" className="mr-sm-2" />
+                    <Form inline  >
+                        <input className="mw-300 br-20 fst-italic" type="text" placeholder="Search..." ></input>
                     </Form>
 
             </Navbar>
