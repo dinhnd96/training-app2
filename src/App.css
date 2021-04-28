@@ -64,7 +64,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -316,7 +315,9 @@ body {font-family: Verdana, sans-serif;}
 .Navbar-Page {
   width:61.8%;
 }
-
+.navbar-right-icon {
+  display:flex;
+}
 /* add items */
 
 .addvalue-dashboard {
@@ -428,7 +429,7 @@ body {font-family: Verdana, sans-serif;}
   display: none;
 }
 
-@media (max-width: 1199.98px) { 
+@media (max-width: 1024px) { 
   .sidenav {
     display: none !important;
   }
@@ -483,6 +484,18 @@ display:none !important;
   }
  }
 
- @media (max-width: 575.98px) { 
-
+ @media (max-width: 415px) { 
+  .navbar-right-icon {
+    display:none;
+  }
+  .input-icon {
+    display:none !important;
+  }
+  .Product {
+    width: 40vh;
+  }
+  .w-70 {
+    max-width:50% !important;
+  }
+ 
   }
