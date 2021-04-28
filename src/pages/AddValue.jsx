@@ -2,7 +2,7 @@ import celendar from '../assets/calendar-alt-solid.svg'
 
 function AddValue() {
     return (
-        <div className="addvalue-dashboard">
+        <div className="addvalue-dashboard ">
         <h1 className="addvalue-dashboard-title">THÊM MỚI ĐỒ VẬT</h1>
         <div className="addvalue-dashboard-left">
           <div className="addvalue-dashboard-left-input">

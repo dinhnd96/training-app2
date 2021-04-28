@@ -15,8 +15,9 @@ function HomePage() {
                 <div className="row">
 
                     <div className="Right-page col-9 w-70">
-                        <div className="Add-item-btn d-flex justify-content-end mr-10">
-                            <Button variant="primary" type="submit">
+                        <div className="Add-item-btn justify-content-end mr-10">
+                            <Button variant="primary" type="submit" >
+
                                 THÊM MỚI ĐỒ VẬT
                         </Button>
                         </div>

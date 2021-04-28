@@ -2,22 +2,19 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import LogoApp from './logo'
-import celendar from '../assets/calendar-alt-solid.svg'
-import user from '../assets/users-solid.svg'
-import key from '../assets/key-solid.svg'
 function Validation() {
     return (
         <Container className="d-flex m-auto justify-content-center h-80">
             <Form className="validation-from ">
                 <LogoApp />
-                <div className="pb-10">
+                <div className="pb-10 input-icon">
                     <Form.Group controlId="formBasicEmail">
-                    <a className="email-icon" href="#"><img src={user}></img></a>
+                    <i class="fa fa-user icon"></i>
                         <Form.Control className="form-email " type="email" placeholder="Tên tài khoản" />
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
-                    <a className="password-icon" href="#"><img src={key}></img></a>
+                    <i class="fa fa-user icon"></i>
                         <Form.Control className="form-password" type="password" placeholder="Mật khẩu" />
                     </Form.Group>
 

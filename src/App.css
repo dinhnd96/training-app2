@@ -1,3 +1,6 @@
+.tit-10 {
+  text-indent: 10px !important;
+}
 .vh-100 {
   height:100vh !important;
 }
@@ -55,6 +58,7 @@
   border-radius: 20px!important;
 }
 
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -110,54 +114,7 @@
 .progess-bar {
   width: 150px;
 }
-.email-icon {
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  top:375px;
-  right:650px;
 
-}
-.password-icon {
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  top:428px;
-  right:650px;
-
-}
-.password-confimation-icon {
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  top:375px;
-  right:650px;
-
-}
-.email-iconR {
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  top:375px;
-  right:660px;
-
-}
-.password-iconR {
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  top:438px;
-  right:660px;
-
-}
-.password-confimation-iconR {
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  top:502px;
-  right:660px;
-
-}
 .form-email {
   text-indent: 30px;
 }
@@ -169,6 +126,7 @@
 }
 /* */
 .sidenav {
+  display: flex;
   height: 100%;
   width: 160px;
   position: fixed;
@@ -191,6 +149,9 @@
 }
 .NavBar-icon {
   border-radius: 25px;
+}
+.icon-navbar {
+  padding-left: 270px;
 }
 
 /* calender*/
@@ -369,7 +330,7 @@ body {font-family: Verdana, sans-serif;}
     padding: 30px;
     flex-wrap: wrap;
     border-radius: 20px;
-
+    display: none;
 }
 .addvalue-dashboard-title {
   position: absolute;
@@ -442,10 +403,6 @@ body {font-family: Verdana, sans-serif;}
 
 
 /* icon input*/
-.input-icons i {
-  position: absolute;
-}
-
 .input-icons {
   width: 100%;
   margin-bottom: 10px;
@@ -457,3 +414,75 @@ body {font-family: Verdana, sans-serif;}
   text-align: center;
 }
 
+.input-input-iconstyle {
+  max-width:400px;
+  margin:auto;
+}
+.input-icon i {
+  position: absolute;
+}
+.Add-item-btn {
+  display: flex;
+}
+.add-product-hidden {
+  display: none;
+}
+
+@media (max-width: 1199.98px) { 
+  .sidenav {
+    display: none !important;
+  }
+  .Navbar-Brand {
+    display: none !important;
+  }
+  .Left-page {
+display:none !important;
+  }
+  .Right-page {
+    border: none!important;
+    width:100vh !important;
+  }
+  .Add-item-btn {
+    display:none !important;
+  }
+  .Product {
+    border: 1px solid rgb(131, 131, 131);
+    margin-top:20px;
+    box-shadow: -3px 4px 5px  rgb(148, 148, 148);
+    margin-right: 10px;
+    width: 48%;
+  }
+  .Product-img {
+    background-image: url(https://webcaycanh.com/wp-content/uploads/2020/08/cay-xuong-rong-bong-gon.jpg);
+    width:250px;
+    height:250px;
+    background-size:cover;
+    background-origin: content-box;
+    margin:auto;
+  }
+  .add-product-hidden {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .active {
+    display:none !important;
+  }
+  .Product-content p {
+      height:30px;
+      width: 200px;
+      font-size:16px; 
+  }
+  .login-left {
+    display:none;
+  }
+  .login-right {
+    height: 100vh;
+  }
+  .Navbar-Toggle {
+    margin-left: -20px;
+  }
+ }
+
+ @media (max-width: 575.98px) { 
+
+  }

@@ -8,11 +8,11 @@ function NavBarPage() {
     return (
         <Container className="d-flex justify-content-between ">
             <Navbar className="Navbar-Page " bg="light" expand="lg">
-                <Navbar.Brand href="#home" className="text-primary">WELCOME TO MY HOME</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                
-                    <Form inline  >
-                        <input className="mw-300 br-20 fst-italic" type="text" placeholder="Search..." ></input>
+                <Navbar.Brand href="#home" className="Navbar-Brand text-primary">WELCOME TO MY HOME</Navbar.Brand>
+                <Navbar.Toggle className="Navbar-Toggle" aria-controls="basic-navbar-nav" />
+                    <Form className="input-icon" inline  >
+                    <i class="fa fa-user icon-navbar"></i>
+                        <input className="mw-300 br-20 fst-italic tit-10" type="text" placeholder="Search..." ></input>
                     </Form>
 
             </Navbar>

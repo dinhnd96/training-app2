@@ -9,10 +9,10 @@ function Login() {
   return (
     <div>
       <Row>
-        <Col className="p-0 vh-100">
+        <Col className="login-left p-0 vh-100">
           <CardHomePage/>
         </Col>
-        <Col className="d-flex bg-info">
+        <Col className="login-right d-flex bg-info">
           <Validation1/>
         </Col>
       </Row>
