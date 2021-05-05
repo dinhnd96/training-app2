@@ -6,10 +6,9 @@ import FormControl from 'react-bootstrap/FormControl'
 
 function NavBarPage() {
     return (
-        <Container className="d-flex justify-content-between ">
-            <Navbar className="Navbar-Page " bg="light" expand="lg">
+        <Container className="nav-bar  justify-content-between ">
+            <Navbar className="Navbar-Page " expand="lg">
                 <Navbar.Brand href="#home">WELCOME TO MY HOME</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 
                     <Form inline >
                         <FormControl width="48"  type="text" placeholder="Search" className="mr-sm-2" />

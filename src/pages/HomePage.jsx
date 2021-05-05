@@ -27,6 +27,10 @@ function HomePage() {
                         <CardProduct />
                         <CardProduct />
                         <CardProduct />
+                        <CardProduct />
+                        <CardProduct />
+                        <CardProduct />
+                        <CardProduct />
 
                     </div>
                 </div>
