@@ -1,13 +1,13 @@
-
+import Logo from '../assets/hi.png';
 
 function LogoApp() {
     return (
         <div className="Logo-app pb-40">
             <div class=" d-flex align-items-center ">
             <h1 class="h1 mb-3 fw-normal text-white">LOGIN</h1>
-            <img class="mb-4" src="https://seeklogo.com/images/C/cat-logo-E6BC30BEB2-seeklogo.com.png" alt="" width="150" height="100" />
+            <img class="mb-4" src={Logo} alt="" width="150" height="150" />
             </div>
-            <h1 class="h1 mb-3 fw-normal text-end text-white">HERE!</h1>
+            <h1 class="h1 mb-3 fw-normal text-end text-white mt-50">HERE!</h1>
         </div>
         
     );

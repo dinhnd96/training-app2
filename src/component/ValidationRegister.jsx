@@ -15,12 +15,12 @@ function Validation1() {
                     </Form.Group>
 
                     <Form.Group className="pb-10" controlId="formBasicPassword">
-                    <i class="fa fa-user icon"></i>
+                    <i class="fas fa-key icon "></i>
                         <Form.Control className="form-password" type="password" placeholder="Mật khẩu" />
                     </Form.Group>
 
                     <Form.Group className="pb-10" controlId="formBasicPassword">
-                    <i class="fa fa-user icon"></i>
+                    <i class="fas fa-key icon "></i>
                         <Form.Control className="form-password-confimation" type="password" placeholder="Xác nhận mật khẩu" />
                     </Form.Group>
 

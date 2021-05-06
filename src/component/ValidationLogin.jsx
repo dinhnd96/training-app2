@@ -2,6 +2,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import LogoApp from './logo'
+
 function Validation() {
     return (
         <Container className="d-flex m-auto justify-content-center h-80">
@@ -14,7 +15,7 @@ function Validation() {
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
-                    <i class="fa fa-user icon"></i>
+                    <i class="fas fa-key icon"></i>
                         <Form.Control className="form-password" type="password" placeholder="Mật khẩu" />
                     </Form.Group>
 
@@ -26,6 +27,7 @@ function Validation() {
                     <Button className="mw-150" variant="primary" type="submit">
                         ĐĂNG NHẬP
                 </Button>
+                
                 </div>
             </Form>
             <div class="position-absolute bottom-0">Một sản phẩm của New Product Team</div>

@@ -57,6 +57,9 @@
 .br-20 {
   border-radius: 20px!important;
 }
+.mt-50 {
+  margin-top:-50px !important;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -127,7 +130,7 @@
 .sidenav {
   display: flex;
   height: 100%;
-  width: 160px;
+  width: 68px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -230,6 +233,7 @@ body {font-family: Verdana, sans-serif;}
 }
 .Left-page h6 {
   text-align: center;
+  font-size:0.9rem;
 }
 
 .home-page-content-out-of-date li {
@@ -239,7 +243,7 @@ body {font-family: Verdana, sans-serif;}
   color:rgb(0, 195, 255);
 }
 .home-page-content-out-of-date li{
-  font-size:15px;
+  font-size:12px;
 }
 .home-page-content-contructor-img {
   display: flex;
@@ -286,8 +290,7 @@ body {font-family: Verdana, sans-serif;}
   width: 23%;
 }
 .Product-img {
-  background-image: url(https://webcaycanh.com/wp-content/uploads/2020/08/cay-xuong-rong-bong-gon.jpg);
-  width:120px;
+  width:150px;
   height:120px;
   background-size:cover;
   background-origin: content-box;
@@ -303,7 +306,7 @@ body {font-family: Verdana, sans-serif;}
   overflow: hidden;
   text-overflow: ellipsis; 
   height:50px;
-  width: 150px;
+  width: 130px;
   font-size:14px; 
 }
 
@@ -422,29 +425,136 @@ body {font-family: Verdana, sans-serif;}
 .input-icon i {
   position: absolute;
 }
+.Right-page-btn {
+  text-indent: 15px;
+}
 .Add-item-btn {
   display: flex;
+}
+.Add-item-btn i {
+  margin-left: 10px;
+  position: absolute;
+  color: white;
+  margin-top: 1px;
+  margin-right: 138px;
 }
 .add-product-hidden {
   display: none;
 }
 
-@media (max-width: 1024px) { 
-  .sidenav {
-    display: none !important;
-  }
-  .Navbar-Brand {
-    display: none !important;
+
+  /* Mobile */
+  .nav {
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+}
+.nav__list li {
+  width: 28px;
+  height: 28px;
+  margin-top: 40px;
+}
+.nav__list .nav__link {
+  width: 16px;
+  height: 16px;
+  color: #333;
+
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 48px;
+  width: 16px;
+  height: 16px;
+}
+/* Mobile */
+.nav-bar {
+  display: flex;
+}
+.nav-bars-btn {
+  width:28px;
+  height: 28px;
+  color:#666;
+  margin-left: 8px;
+  display:none;
+}
+.nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgba(0, 0, 0, 0.3);
+  display:none;
+  animation: fadeIn linear 0.3s;
+  z-index: 1;
+}
+.nav__mobile {
+  position:fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 320px;
+  max-width:100%;
+  background-color:#fff;
+  transform:translateX(-100%);
+  transition: all linear 0.3s;
+  z-index: 1;
+}
+.nav__mobile-list {
+  margin-top:24px;
+}
+.nav__mobile-link {
+  text-decoration: none;
+  color: #333;
+  display:block;
+  padding:8px 0 ;
+  font-size:1.4rem;
+}
+.nav__mobile-close {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  color: #333;
+  top: 1rem;
+  right:1rem;
+}
+.nav-input {
+  display: none;
+}
+.nav-input:checked ~ .nav__overlay {
+  display: block;
+}
+.nav-input:checked ~ .nav__mobile {
+  transform: translateX(0%)
+}
+/*Ipad pro PC*/
+@media (max-width: 1024px) {
+
+  .Right-page {
+    width: 60%;
   }
   .Left-page {
-display:none !important;
+    width: 35%;
   }
-  .Right-page {
-    border: none!important;
-    width:100vh !important;
+  .Product {
+    width: 40%;
   }
-  .Add-item-btn {
-    display:none !important;
+  .w-70 {
+    max-width:72% !important;
+  }
+  .NavBar-icon {
+  text-align: left;
+  }
+  .sidenav {
+    display: none !important;
   }
   .Product {
     border: 1px solid rgb(131, 131, 131);
@@ -453,49 +563,101 @@ display:none !important;
     margin-right: 10px;
     width: 48%;
   }
-  .Product-img {
-    background-image: url(https://webcaycanh.com/wp-content/uploads/2020/08/cay-xuong-rong-bong-gon.jpg);
-    width:250px;
-    height:250px;
-    background-size:cover;
-    background-origin: content-box;
-    margin:auto;
-  }
+
   .add-product-hidden {
-    display: block;
+    display: none;
     margin-bottom: 20px;
   }
-  .active {
-    display:none !important;
-  }
+
   .Product-content p {
       height:30px;
-      width: 200px;
+      width: 100px;
       font-size:16px; 
-  }
-  .login-left {
-    display:none;
+      overflow: hidden;
+      text-overflow: ellipsis;
   }
   .login-right {
     height: 100vh;
   }
-  .Navbar-Toggle {
+  .Avatar-mobile {
+    border-bottom: 2px solid;
+    padding-bottom: 23px;
+  }
+  .Navbar-Page {
     margin-left: -20px;
   }
- }
-
- @media (max-width: 415px) { 
-  .navbar-right-icon {
-    display:none;
+  .Product-content { 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
   }
-  .input-icon {
+  .Product-content p {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:200px;
+    height:25px;
+}
+}
+/*Ipad*/
+@media (max-width: 768px) {
+  .Navbar-Page {
     display:none !important;
   }
+  .navbar-right-icon  {
+    display:none !important;
+  }
+  .nav-bars-btn {
+    display:block;
+  }
+  .nav__pc {
+    display: none;
+  }
   .Product {
-    width: 40vh;
+    width:47%;
   }
-  .w-70 {
-    max-width:50% !important;
+
+  .Avatar-mobile {
+    border-bottom: 1px solid;
+    padding-bottom: 23px;
   }
- 
+.Product-content p {
+  font-size: 12px;
+}
+
+.mw-300 {
+  min-width:300px !important;
+}
+.pt-60 {
+  padding-top: 0 !important;
+}
+}
+/* Mobile*/
+@media (max-width: 375px) {
+  .Product {
+    width: 100%;
+}
+.w-70 {
+  max-width: 100% !important;
+}
+.Right-page {
+  border:none;
+}
+.Left-page {
+  margin-left: 50px;
+  max-width:100% !important;
+}
+.Left-page-head {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+}
+
+@keyframes fadeIn {
+  form {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}

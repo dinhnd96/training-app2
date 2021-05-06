@@ -6,35 +6,39 @@ import CardProduct from '../component/CardProduct'
 import Calendar from '../component/Calendar'
 import celendar from '../assets/calendar-alt-solid.svg'
 import AddValue from './AddValue'
+import SideBarMobile from '../component/Sidebar-mobile'
+import Table from '../assets/Bàn-trà-tròn-Turning-table-WT014-1.jpg'
+import Lotus from '../assets/Lotus.jpg'
+import Chair3 from '../assets/Chair3.jpg'
 function HomePage() {
     return (
         <Container>
+            <SideBarMobile />
             <SideBar />
             <NavBarPage />
             <Container className="d-flex primary-color">
                 <div className="row">
 
-                    <div className="Right-page col-9 w-70">
+                    <div className="Right-page col-sm-9 w-70">
                         <div className="Add-item-btn justify-content-end mr-10">
-                            <Button variant="primary" type="submit" >
-
+                        <i class="fas fa-plus-circle icon"></i>
+                            <Button className="Right-page-btn" variant="primary" type="submit" >
                                 THÊM MỚI ĐỒ VẬT
                         </Button>
                         </div>
                         <div className="Main-content d-flex flex-wrap">
-                            <CardProduct />
-                            <CardProduct />
-                            <CardProduct />
-                            <CardProduct />
-                            <CardProduct />
-                            <CardProduct />
-                            <CardProduct />
-                            <CardProduct />
-                            <CardProduct />
-                            <CardProduct />
-                            <CardProduct />
-                            <CardProduct />
-
+                            <CardProduct img={Lotus} name="Sen Đá" decore="Trang trí" desription="Một vật dụng bày trong phòng" />
+                            <CardProduct img={Chair3} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể dùng để ngồi" />
+                            <CardProduct img={Table} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể để đựng đồ" />
+                            <CardProduct img={Table} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể để đựng đồ" />
+                            <CardProduct img={Lotus} name="Sen Đá" decore="Trang trí" desription="Một vật dụng bày trong phòng" />
+                            <CardProduct img={Chair3} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể dùng để ngồi" />
+                            <CardProduct img={Table} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể để đựng đồ" />
+                            <CardProduct img={Table} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể để đựng đồ" />
+                            <CardProduct img={Lotus} name="Sen Đá" decore="Trang trí" desription="Một vật dụng bày trong phòng" />
+                            <CardProduct img={Chair3} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể dùng để ngồi" />
+                            <CardProduct img={Table} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể để đựng đồ" />
+                            <CardProduct img={Table} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể để đựng đồ" />
                         </div>
                     </div>
                     <div className="Left-page col-3">
@@ -55,7 +59,7 @@ function HomePage() {
                         <div className="home-page-content-contructor">
                             <h6>CẤU TRÚC PHÒNG CỦA TÔI</h6>
                             <div className="home-page-content-contructor-img">
-                                <img className ="child" src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX36256163.jpg" width="200" height="200"></img>
+                                <img className="child" src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX36256163.jpg" width="200" height="200"></img>
                             </div>
                             <div class="position-absolute bottom-0 fs-15"><p>Một sản phẩm của New Product Team</p></div>
                         </div>

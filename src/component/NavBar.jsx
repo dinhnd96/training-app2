@@ -1,15 +1,17 @@
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
+import SideBar from '../component/SideBar'
+import Key from '../assets/key.png'
 
 function NavBarPage() {
     return (
         <Container className="d-flex justify-content-between ">
+            <SideBar/>
             <Navbar className="Navbar-Page " bg="light" expand="lg">
                 <Navbar.Brand href="#home" className="Navbar-Brand text-primary">WELCOME TO MY HOME</Navbar.Brand>
-                <Navbar.Toggle className="Navbar-Toggle" aria-controls="basic-navbar-nav" />
                     <Form className="input-icon" inline  >
-                    <i class="fa fa-user icon-navbar"></i>
+                    <i class="fas fa-search icon-navbar"></i>
                         <input className="mw-300 br-20 fst-italic tit-10" type="text" placeholder="Search..." ></input>
                     </Form>
 
