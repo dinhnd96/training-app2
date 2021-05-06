@@ -335,6 +335,7 @@ body {font-family: Verdana, sans-serif;}
     flex-wrap: wrap;
     border-radius: 20px;
     display: none;
+
 }
 .addvalue-dashboard-title {
   position: absolute;
@@ -650,6 +651,12 @@ body {font-family: Verdana, sans-serif;}
 .Left-page-head {
   margin-top: 40px;
   margin-left: 40px;
+}
+.add-product-hidden {
+  display:block;
+}
+.Add-item-btn {
+  display:none;
 }
 }
 

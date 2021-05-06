@@ -1,4 +1,5 @@
 import celendar from '../assets/calendar-alt-solid.svg'
+import Button from 'react-bootstrap/Button'
 
 function AddValue() {
     return (
@@ -45,8 +46,8 @@ function AddValue() {
           <input></input>
         </div>
         <div className="addvalue-dashboard-bottom">
-          <button>Hủy</button>
-          <button>Lưu và thêm mới</button>
+          <Button type="submit">Hủy</Button>
+          <Button type="submit">Lưu và thêm mới</Button>
         </div>
       </div>
     );
