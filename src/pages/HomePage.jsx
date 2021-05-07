@@ -10,7 +10,88 @@ import SideBarMobile from '../component/Sidebar-mobile'
 import Table from '../assets/Bàn-trà-tròn-Turning-table-WT014-1.jpg'
 import Lotus from '../assets/Lotus.jpg'
 import Chair3 from '../assets/Chair3.jpg'
+import MyVerticallyCenteredModal from '../component/Modal'
 function HomePage() {
+    const data = [
+        {
+            img: Lotus,
+            name: "Sen Đá",
+            decore: "Trang trí",
+            description: "Một vật dụng bày trong phòng"
+        },
+        {
+            img: Chair3,
+            name: "Sen Đá",
+            decore: "Trang trí",
+            description: "Một vật dụng bày trong phòng"
+        },
+        {
+            img: Table,
+            name: "Sen Đá",
+            decore: "Trang trí",
+            description: "Một vật dụng bày trong phòng"
+        },
+        {
+            img: Table,
+            name: "Sen Đá",
+            decore: "Trang trí",
+            description: "Một vật dụng bày trong phòng"
+        },
+        {
+            img: Lotus,
+            name: "Sen Đá",
+            decore: "Trang trí",
+            description: "Một vật dụng bày trong phòng"
+        },
+        {
+            img: Chair3,
+            name: "Sen Đá",
+            decore: "Trang trí",
+            description: "Một vật dụng bày trong phòng"
+        },
+        {
+            img: Table,
+            name: "Sen Đá",
+            decore: "Trang trí",
+            description: "Một vật dụng bày trong phòng"
+        },
+        {
+            img: Table,
+            name: "Sen Đá",
+            decore: "Trang trí",
+            description: "Một vật dụng bày trong phòng"
+        },{
+            img: Lotus,
+            name: "Sen Đá",
+            decore: "Trang trí",
+            description: "Một vật dụng bày trong phòng"
+        },
+        {
+            img: Chair3,
+            name: "Sen Đá",
+            decore: "Trang trí",
+            description: "Một vật dụng bày trong phòng"
+        },
+        {
+            img: Table,
+            name: "Sen Đá",
+            decore: "Trang trí",
+            description: "Một vật dụng bày trong phòng"
+        },
+        {
+            img: Table,
+            name: "Sen Đá",
+            decore: "Trang trí",
+            description: "Một vật dụng bày trong phòng"
+        },
+    ]
+    const renderCardProduct = () => {
+        return data.map((value, index) => {
+            return (
+                <CardProduct img={value?.img} name={value?.name} decore={value?.decore} description={value?.description} key={index} />
+            )
+        })
+    }
     return (
         <Container>
             <SideBarMobile />
@@ -22,23 +103,10 @@ function HomePage() {
                     <div className="Right-page col-sm-9 w-70">
                         <div className="Add-item-btn justify-content-end mr-10">
                         <i class="fas fa-plus-circle icon"></i>
-                            <Button className="Right-page-btn" variant="primary" type="submit" >
-                                THÊM MỚI ĐỒ VẬT
-                        </Button>
+                        <MyVerticallyCenteredModal/>
                         </div>
                         <div className="Main-content d-flex flex-wrap">
-                            <CardProduct img={Lotus} name="Sen Đá" decore="Trang trí" desription="Một vật dụng bày trong phòng" />
-                            <CardProduct img={Chair3} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể dùng để ngồi" />
-                            <CardProduct img={Table} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể để đựng đồ" />
-                            <CardProduct img={Table} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể để đựng đồ" />
-                            <CardProduct img={Lotus} name="Sen Đá" decore="Trang trí" desription="Một vật dụng bày trong phòng" />
-                            <CardProduct img={Chair3} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể dùng để ngồi" />
-                            <CardProduct img={Table} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể để đựng đồ" />
-                            <CardProduct img={Table} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể để đựng đồ" />
-                            <CardProduct img={Lotus} name="Sen Đá" decore="Trang trí" desription="Một vật dụng bày trong phòng" />
-                            <CardProduct img={Chair3} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể dùng để ngồi" />
-                            <CardProduct img={Table} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể để đựng đồ" />
-                            <CardProduct img={Table} name="Sen Đá" decore="Trang trí" desription="Đồ vật có thể để đựng đồ" />
+                            {renderCardProduct()}
                         </div>
                     </div>
                     <div className="Left-page col-3">

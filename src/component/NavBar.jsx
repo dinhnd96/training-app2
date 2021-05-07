@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import SideBar from '../component/SideBar'
 import Key from '../assets/key.png'
+import IconDropDown from '../component/Dropdown'
 
 function NavBarPage() {
     return (
@@ -17,8 +18,9 @@ function NavBarPage() {
 
             </Navbar>
             <div className="navbar-right-icon "> 
-                <img className="NavBar-icon mr-10" src="https://www.nintendoenthusiast.com/wp-content/uploads/2019/07/Psyduck.jpg" width="50"></img>
-                <p className="m-auto">Vịt Bối Dối</p>
+                {/* <img className="NavBar-icon mr-10" src="https://www.nintendoenthusiast.com/wp-content/uploads/2019/07/Psyduck.jpg" width="50"></img>
+                <p className="m-auto">Vịt Bối Dối</p> */}
+                <IconDropDown/>
             </div>
         </Container>
     );

@@ -1,5 +1,6 @@
-import Button from 'react-bootstrap/Button'
-function CardProduct({img, name,decore,desription}) {
+
+import MyVerticallyCenteredModal from '../component/Modal'
+function CardProduct({img, name,decore,description}) {
     return (
         <div className="Product">
             <div className="Product-img">
@@ -8,11 +9,9 @@ function CardProduct({img, name,decore,desription}) {
             <div className="Product-content ">
                 <h6>{name}</h6>
                 <span className="active">{decore}</span>
-                <p className="text-start text-wrap">{desription}</p>
+                <p className="text-start text-wrap">{description}</p>
                 <div className="add-product-hidden">
-                    <Button variant="primary" type="submit" >
-                        THÊM MỚI ĐỒ VẬT
-                </Button>
+                <MyVerticallyCenteredModal/>
                 </div>
             </div>
 

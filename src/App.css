@@ -290,7 +290,7 @@ body {font-family: Verdana, sans-serif;}
   width: 23%;
 }
 .Product-img {
-  width:150px;
+  width:130px;
   height:120px;
   background-size:cover;
   background-origin: content-box;
@@ -323,30 +323,6 @@ body {font-family: Verdana, sans-serif;}
 }
 /* add items */
 
-.addvalue-dashboard {
-  position: relative;
-    top: -846px;
-    /* left: 0px; */
-    width: 1200px;
-    height: 800px;
-    background-color: #f1f1f1;
-    display: flex;
-    padding: 30px;
-    flex-wrap: wrap;
-    border-radius: 20px;
-    display: none;
-
-}
-.addvalue-dashboard-title {
-  position: absolute;
-  color:rgb(0, 195, 255);
-}
-.addvalue-dashboard-close {
-  width:20px;
-  height:20px;
-  position: relative;
-  left:1115px;
-}
 .addvalue-dashboard-close-image {
   width:20px;
   height:20px;
@@ -355,57 +331,35 @@ body {font-family: Verdana, sans-serif;}
   top:100px;
 }
 .addvalue-dashboard-left {
-  margin-top: 50px;
-}
 
-.addvalue-dashboard-left-input input {
-  min-width: 500px;
-}
-.addvalue-dashboard-right {
-  background-image: url(https://cb.scene7.com/is/image/Crate/EllaWhiteTableLampOffSHF15);
-  background-size: cover;
-  width: 500px;
-  height: 387px;
-  margin-top: 100px;
-  margin-left: 50px;
 }
 .addvalue-dashboard-middle {
-  width:500px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top:-40px;
 }
 .addvalue-dashboard-middle input {
-  width:1046px;
+  width:750px;
   height:100px;
   border-radius:20px;
 
 }
-.addvalue-dashboard-bottom {
-  width: 92%;
-  justify-content: space-between;
-  display: flex;
-  border-top: 2px solid #282c34;
-  padding-top: 15px;
+.addvalue-dashboard-right {
+  width: 100%;
 }
-.addvalue-dashboard-left-input .addvalue-dashboard-left-input-icon {
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  left: 500px;
-  top: 400px;
+.Modal-footer-input {
+  width: 100%;
 }
-.addvalue-dashboard-left-input .addvalue-dashboard-left-input-icon2 {
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  left: 500px;
-  top: 470px;
+.addvalue-img {
+  width:150px;
+  height:120px;
+  background-size:cover;
+  background-origin: content-box;
+  margin:auto;
 }
-.addvalue-dashboard-bottom ::after {
-  content:"";
-  width:1000px;
-  height:5px;
-  background-color:red;
+.addvalue-dashboard-left-input input {
+  min-width: 300px;
 }
-
 
 /* icon input*/
 .input-icons {
@@ -438,6 +392,9 @@ body {font-family: Verdana, sans-serif;}
   color: white;
   margin-top: 1px;
   margin-right: 138px;
+}
+.tid-10 {
+  text-indent: 15px;
 }
 .add-product-hidden {
   display: none;
@@ -540,10 +497,10 @@ body {font-family: Verdana, sans-serif;}
 @media (max-width: 1024px) {
 
   .Right-page {
-    width: 60%;
+    width: 64%;
   }
   .Left-page {
-    width: 35%;
+    width: 30%;
   }
   .Product {
     width: 40%;
@@ -562,7 +519,7 @@ body {font-family: Verdana, sans-serif;}
     margin-top:20px;
     box-shadow: -3px 4px 5px  rgb(148, 148, 148);
     margin-right: 10px;
-    width: 48%;
+    width: 44%;
   }
 
   .add-product-hidden {
@@ -620,7 +577,7 @@ body {font-family: Verdana, sans-serif;}
 
   .Avatar-mobile {
     border-bottom: 1px solid;
-    padding-bottom: 23px;
+    padding-bottom: 7px;
   }
 .Product-content p {
   font-size: 12px;
@@ -632,9 +589,26 @@ body {font-family: Verdana, sans-serif;}
 .pt-60 {
   padding-top: 0 !important;
 }
+.addvalue-dashboard-left-input input {
+  min-width: 200px;
+}
+.addvalue-dashboard-middle {
+  margin-top: 0px;
+}
+.addvalue-dashboard-middle input {
+  width:460px;
+  height:100px;
+  border-radius:20px;
+}
+.tid-10 {
+  text-indent: 0 !important;
+}
 }
 /* Mobile*/
 @media (max-width: 375px) {
+  .validation-from {
+    width:380px;
+  }
   .Product {
     width: 100%;
 }
@@ -657,6 +631,11 @@ body {font-family: Verdana, sans-serif;}
 }
 .Add-item-btn {
   display:none;
+}
+.addvalue-dashboard-middle input {
+  width:320px;
+  border-radius: 10px;
+  height:50px;
 }
 }
 
