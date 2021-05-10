@@ -13,14 +13,18 @@ function NavBarPage() {
           WELCOME TO MY HOME
         </Navbar.Brand>
         <Form className="input-icon" inline>
-          <label for="inputState" class="form-label"></label>
-          <select id="inputState" class="form-select">
-            <option selected>Search...</option>
-            <option>Sen Đá</option>
-            <option>Ghế tựa</option>
-            <option>Bàn tựa</option>
-            <option>Sen Đá</option>
-          </select>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Control
+              className="mw-300 br-20 fst-italic tit-10"
+              placeholder="Search..."
+            />
+          </Form.Group>
+          <i class="fas fa-search icon-navbar"></i>
+          {/* <input
+            className="mw-300 br-20 fst-italic tit-10"
+            type="text"
+            placeholder="Search..."
+          ></input> */}
         </Form>
       </Navbar>
 
