@@ -47,16 +47,26 @@ function Validation1() {
             <ProgressBar striped variant="danger" now={34} key={3} />
           </ProgressBar>
         </div>
-        <div className="password-progess-bar-input d-flex justify-content-between">
-          <Button variant="primary" type="submit" href="/login">
+        <div className="password-progess-bar-input d-flex justify-content-between ">
+          <Button
+            className="fw-bold"
+            variant="outline-warning"
+            type="submit"
+            href="/login"
+          >
             TẠO TÀI KHOẢN
           </Button>
-          <Button variant="primary" type="submit" href="/">
+          <Button
+            className="fw-bold"
+            variant="outline-warning"
+            type="submit"
+            href="/"
+          >
             ĐĂNG NHẬP
           </Button>
         </div>
         <div class="ml-60 position-absolute bottom-0">
-          Một sản phẩm của New Product Team
+          <p>Một sản phẩm của New Product Team</p>
         </div>
       </Form>
     </Container>

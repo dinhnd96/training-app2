@@ -2,14 +2,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import LogoApp from "./logo";
-import { useState } from "react";
 
 function Validation() {
-  const handleClick = () => {
-    console.log(
-      "https://stackoverflow.com/questions/42463263/wrapping-a-react-router-link-in-an-html-button"
-    );
-  };
   return (
     <Container className="d-flex m-auto justify-content-center h-80">
       <Form className="validation-from ">
@@ -34,16 +28,25 @@ function Validation() {
           </Form.Group>
         </div>
         <div className="password-progess-bar-input d-flex justify-content-between">
-          <Button className="mw-150" variant="primary" href="/register">
+          <Button
+            className="mw-150 text-uppercase fw-bold"
+            variant="outline-warning"
+            href="/register"
+          >
             TẠO TÀI KHOẢN
           </Button>
-          <Button className="mw-150" variant="primary" type="submit" href="/">
+          <Button
+            className="mw-150 text-uppercase fw-bold"
+            variant="outline-warning"
+            type="submit"
+            href="/"
+          >
             ĐĂNG NHẬP
           </Button>
         </div>
       </Form>
       <div class="position-absolute bottom-0">
-        Một sản phẩm của New Product Team
+        <p>Một sản phẩm của New Product Team</p>
       </div>
     </Container>
   );
