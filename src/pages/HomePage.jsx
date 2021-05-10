@@ -1,16 +1,15 @@
 import Container from 'react-bootstrap/Container'
 import SideBar from '../component/SideBar'
 import NavBarPage from '../component/NavBar'
-import Button from 'react-bootstrap/Button'
 import CardProduct from '../component/CardProduct'
 import Calendar from '../component/Calendar'
 import celendar from '../assets/calendar-alt-solid.svg'
-import AddValue from './AddValue'
 import SideBarMobile from '../component/Sidebar-mobile'
 import Table from '../assets/Bàn-trà-tròn-Turning-table-WT014-1.jpg'
 import Lotus from '../assets/Lotus.jpg'
 import Chair3 from '../assets/Chair3.jpg'
 import MyVerticallyCenteredModal from '../component/Modal'
+
 function HomePage() {
     const data = [
         {
@@ -21,19 +20,19 @@ function HomePage() {
         },
         {
             img: Chair3,
-            name: "Sen Đá",
+            name: "Ghế tựa",
             decore: "Trang trí",
             description: "Một vật dụng bày trong phòng"
         },
         {
             img: Table,
-            name: "Sen Đá",
+            name: "Bàn tựa",
             decore: "Trang trí",
             description: "Một vật dụng bày trong phòng"
         },
         {
             img: Table,
-            name: "Sen Đá",
+            name: "Bàn tựa",
             decore: "Trang trí",
             description: "Một vật dụng bày trong phòng"
         },
@@ -45,19 +44,19 @@ function HomePage() {
         },
         {
             img: Chair3,
-            name: "Sen Đá",
+            name: "Ghế tựa",
             decore: "Trang trí",
             description: "Một vật dụng bày trong phòng"
         },
         {
             img: Table,
-            name: "Sen Đá",
+            name: "Bàn tựa",
             decore: "Trang trí",
             description: "Một vật dụng bày trong phòng"
         },
         {
             img: Table,
-            name: "Sen Đá",
+            name: "Bàn tựa",
             decore: "Trang trí",
             description: "Một vật dụng bày trong phòng"
         },{
@@ -68,19 +67,19 @@ function HomePage() {
         },
         {
             img: Chair3,
-            name: "Sen Đá",
+            name: "Ghế tựa",
             decore: "Trang trí",
             description: "Một vật dụng bày trong phòng"
         },
         {
             img: Table,
-            name: "Sen Đá",
+            name: "Bàn tựa",
             decore: "Trang trí",
             description: "Một vật dụng bày trong phòng"
         },
         {
             img: Table,
-            name: "Sen Đá",
+            name: "Bàn tựa",
             decore: "Trang trí",
             description: "Một vật dụng bày trong phòng"
         },
@@ -135,7 +134,6 @@ function HomePage() {
                     </div>
                 </div>
             </Container>
-            <AddValue />
         </Container>
     )
 }
