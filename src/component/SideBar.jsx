@@ -10,10 +10,10 @@ function SideBar() {
         <img width="50" src={menubar}></img>
       </a>
       <a className="sidenav-icon" href="#">
-        <img width="50" src={cogs}></img>
+        <img width="50" src={home}></img>
       </a>
       <a className="sidenav-icon" href="#">
-        <img width="50" src={home}></img>
+        <img width="50" src={cogs}></img>
       </a>
       <a className="sidenav-icon" href="#">
         <img width="50" src={celendar}></img>
