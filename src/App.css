@@ -159,11 +159,10 @@
 }
 
 .sidenav-icon {
-  background-color: transparent;
-  color: rgb(0, 195, 255);
   width: 60px;
   height: 80px;
   margin-bottom: 20px;
+  margin-left: 30px;
 }
 .NavBar-icon {
   border-radius: 25px;

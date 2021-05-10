@@ -7,16 +7,16 @@ function SideBar() {
   return (
     <div class="sidenav flex-column">
       <a className="sidenav-icon" href="#">
-        <img width="50" src={menubar}></img>
+        <img width="30" src={menubar}></img>
       </a>
       <a className="sidenav-icon" href="#">
-        <img width="50" src={home}></img>
+        <img width="30" src={home}></img>
       </a>
       <a className="sidenav-icon" href="#">
-        <img width="50" src={cogs}></img>
+        <img width="30" src={cogs}></img>
       </a>
       <a className="sidenav-icon" href="#">
-        <img width="50" src={celendar}></img>
+        <img width="30" src={celendar}></img>
       </a>
     </div>
   );
