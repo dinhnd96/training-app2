@@ -23,7 +23,7 @@ function Validation() {
             <Form.Control
               className="form-password"
               type="password"
-              placeholder="Mật khẩu"
+              placeholder="Mật khẩu "
             />
           </Form.Group>
         </div>

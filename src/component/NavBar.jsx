@@ -20,11 +20,6 @@ function NavBarPage() {
             />
           </Form.Group>
           <i class="fas fa-search icon-navbar"></i>
-          {/* <input
-            className="mw-300 br-20 fst-italic tit-10"
-            type="text"
-            placeholder="Search..."
-          ></input> */}
         </Form>
       </Navbar>
 

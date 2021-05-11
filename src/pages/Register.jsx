@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import CardHomePage from "../component/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import FormExampleR from "../component/ValidationFromR";
 
 function Login() {
   return (
@@ -13,7 +14,8 @@ function Login() {
           <CardHomePage />
         </Col>
         <Col className="login-right d-flex bg-info-main">
-          <Validation1 />
+          {/* <Validation1 /> */}
+          <FormExampleR />
         </Col>
       </Row>
     </div>
