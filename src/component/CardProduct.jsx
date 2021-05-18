@@ -1,4 +1,4 @@
-import MyVerticallyCenteredModal from "../component/Modal";
+import MyVerticallyCenteredModal from "./Modal";
 function CardProduct({ img, name, decore, description }) {
   return (
     <div className="Product">

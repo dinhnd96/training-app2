@@ -1,7 +1,7 @@
 import menubar from "../assets/bars-solid.svg";
-import home from "../assets/home-solid.svg";
 import celendar from "../assets/calendar-alt-solid.svg";
 import cogs from "../assets/cogs-solid.svg";
+import home from "../assets/home-solid.svg";
 
 function SideBar() {
   return (

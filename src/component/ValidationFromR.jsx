@@ -1,12 +1,9 @@
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import { useState } from "react";
-import InputGroup from "react-bootstrap/InputGroup";
-import LogoApp from "./logo";
+import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import LogoApp from "./logo";
 function FormExampleR() {
   const [validated, setValidated] = useState(false);
 

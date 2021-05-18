@@ -1,14 +1,14 @@
 import Container from "react-bootstrap/Container";
-import SideBar from "../component/SideBar";
-import NavBarPage from "../component/NavBar";
-import CardProduct from "../component/CardProduct";
-import Calendar from "../component/Calendar";
-import celendar from "../assets/calendar-alt-solid.svg";
-import SideBarMobile from "../component/Sidebar-mobile";
 import Table from "../assets/Bàn-trà-tròn-Turning-table-WT014-1.jpg";
-import Lotus from "../assets/Lotus.jpg";
+import celendar from "../assets/calendar-alt-solid.svg";
 import Chair3 from "../assets/Chair3.jpg";
+import Lotus from "../assets/Lotus.jpg";
+import Calendar from "../component/Calendar";
+import CardProduct from "../component/CardProduct";
 import MyVerticallyCenteredModal from "../component/Modal";
+import NavBarPage from "../component/NavBar";
+import SideBar from "../component/SideBar";
+import SideBarMobile from "../component/Sidebar-mobile";
 
 function HomePage() {
   const data = [

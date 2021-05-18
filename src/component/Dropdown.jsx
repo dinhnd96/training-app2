@@ -13,7 +13,7 @@ function IconDropDown() {
           <p className="m-auto">Vịt Bối Dối</p>
         </Dropdown.Toggle>
 
-        <Dropdown.Menu>
+        <Dropdown.Menu className="w-210">
           <Dropdown.Item href="/">Giỏ Hàng</Dropdown.Item>
           <Dropdown.Item href="#/action-2"></Dropdown.Item>
           <Dropdown.Item href="/login">Đăng Xuất</Dropdown.Item>

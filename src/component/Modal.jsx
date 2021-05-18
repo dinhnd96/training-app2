@@ -2,7 +2,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import React from "react";
 import Table from "../assets/Bàn-trà-tròn-Turning-table-WT014-1.jpg";
-
+import { useState } from "react";
 function MyVerticallyCenteredModal(props) {
   return (
     <Modal
@@ -65,7 +65,7 @@ function MyVerticallyCenteredModal(props) {
 }
 
 function App() {
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = useState(false);
 
   return (
     <>

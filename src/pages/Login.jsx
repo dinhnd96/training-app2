@@ -1,9 +1,8 @@
-import "../App.css";
-import Validation from "../component/ValidationLogin";
 import "bootstrap/dist/css/bootstrap.min.css";
-import CardHomePage from "../component/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import "../App.css";
+import CardHomePage from "../component/Card";
 import FormExample from "../component/ValidationForm";
 
 function Login() {
@@ -14,7 +13,6 @@ function Login() {
           <CardHomePage />
         </Col>
         <Col className="d-flex login-right bg-info-main p-0 vh-100">
-          {/* <Validation /> */}
           <FormExample />
         </Col>
       </Row>

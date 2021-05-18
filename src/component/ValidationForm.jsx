@@ -1,11 +1,8 @@
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import { useState } from "react";
-import InputGroup from "react-bootstrap/InputGroup";
-import LogoApp from "./logo";
+import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import LogoApp from "./logo";
 function FormExample() {
   const [validated, setValidated] = useState(false);
 
@@ -55,8 +52,12 @@ function FormExample() {
           </Form.Group>
         </Form.Row>
         <div className="password-progess-bar-input d-flex justify-content-between">
-          <Button type="submit">TẠO TÀI KHOẢN</Button>
-          <Button type="submit">ĐĂNG NHẬP</Button>
+          <Button className="mw-150" type="submit" href="/register">
+            TẠO TÀI KHOẢN
+          </Button>
+          <Button className="mw-150" type="submit">
+            ĐĂNG NHẬP
+          </Button>
         </div>
         <div class="position-absolute bottom-0 ml-60">
           <p>Một sản phẩm của New Product Team</p>

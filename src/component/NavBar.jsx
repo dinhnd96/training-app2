@@ -1,8 +1,8 @@
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
-import SideBar from "../component/SideBar";
-import IconDropDown from "../component/Dropdown";
+import SideBar from "./SideBar";
+import IconDropDown from "./Dropdown";
 
 function NavBarPage() {
   return (
