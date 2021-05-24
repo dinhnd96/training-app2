@@ -9,7 +9,8 @@ import MyVerticallyCenteredModal from "../component/Modal";
 import NavBarPage from "../component/NavBar";
 import SideBar from "../component/SideBar";
 import SideBarMobile from "../component/Sidebar-mobile";
-
+const getToken = localStorage.getItem("token");
+console.log("token", getToken);
 function HomePage() {
   const data = [
     {
@@ -107,7 +108,7 @@ function HomePage() {
         <div className="row">
           <div className="Right-page col-sm-9 w-70">
             <div className="Add-item-btn justify-content-end mr-10">
-              <i class="fas fa-plus-circle icon"></i>
+              <i className="fas fa-plus-circle icon"></i>
               <MyVerticallyCenteredModal />
             </div>
             <div className="Main-content d-flex flex-wrap">
@@ -141,7 +142,7 @@ function HomePage() {
                   height="200"
                 ></img>
               </div>
-              <div class="position-absolute bottom-0 fs-15">
+              <div className="position-absolute bottom-0 fs-15">
                 <p>Một sản phẩm của New Product Team</p>
               </div>
             </div>

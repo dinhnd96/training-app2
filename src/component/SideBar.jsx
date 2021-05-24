@@ -5,7 +5,7 @@ import home from "../assets/home-solid.svg";
 
 function SideBar() {
   return (
-    <div class="sidenav flex-column">
+    <div className="sidenav flex-column">
       <a className="sidenav-icon" href="#">
         <img width="30" src={menubar}></img>
       </a>

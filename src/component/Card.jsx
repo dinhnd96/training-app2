@@ -4,7 +4,6 @@ import BG from "../assets/welcome_bg.png";
 function CardHomePage() {
   return (
     <Card className="bg-dark text-primary text-center">
-      <Card.Img className="vh-100" src={BG} />
       <Card.ImgOverlay>
         <Card.Title>
           <h1>WELCOME TO</h1>

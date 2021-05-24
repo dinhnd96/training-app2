@@ -19,7 +19,7 @@ function NavBarPage() {
               placeholder="Search..."
             />
           </Form.Group>
-          <i class="fas fa-search icon-navbar"></i>
+          <i className="fas fa-search icon-navbar"></i>
         </Form>
       </Navbar>
 

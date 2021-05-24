@@ -1,14 +1,14 @@
 function SideBarMobile() {
   return (
-    <div class="main">
-      <div class="nav">
+    <div className="main">
+      <div className="nav">
         <label for="nav-mobile-input" className="nav-bars-btn">
           <svg
             aria-hidden="true"
             focusable="false"
             data-prefix="fas"
             data-icon="bars"
-            class="svg-inline--fa fa-bars fa-w-14"
+            className="svg-inline--fa fa-bars fa-w-14"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
@@ -26,15 +26,15 @@ function SideBarMobile() {
         ></input>
         <label className="nav__overlay" for="nav-mobile-input"></label>
 
-        <nav class="nav__mobile">
-          <ul class="nav__mobile-list">
+        <nav className="nav__mobile">
+          <ul className="nav__mobile-list">
             <label className="nav__mobile-close" for="nav-mobile-input">
               <svg
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fas"
                 data-icon="times"
-                class="svg-inline--fa fa-times fa-w-11"
+                className="svg-inline--fa fa-times fa-w-11"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 352 512"
@@ -53,15 +53,15 @@ function SideBarMobile() {
               ></img>
               <p className="m-auto">Vịt Bối Dối</p>
             </div>
-            <ul class="nav__list">
+            <ul className="nav__list">
               <li>
-                <a href="" class="nav__link">
+                <a href="" className="nav__link">
                   <svg
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fas"
                     data-icon="home"
-                    class="svg-inline--fa fa-home fa-w-18"
+                    className="svg-inline--fa fa-home fa-w-18"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512"
@@ -74,13 +74,13 @@ function SideBarMobile() {
                 </a>
               </li>
               <li>
-                <a href="" class="nav__link">
+                <a href="" className="nav__link">
                   <svg
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fas"
                     data-icon="calendar-alt"
-                    class="svg-inline--fa fa-calendar-alt fa-w-14"
+                    className="svg-inline--fa fa-calendar-alt fa-w-14"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
@@ -93,13 +93,13 @@ function SideBarMobile() {
                 </a>
               </li>
               <li>
-                <a href="" class="nav__link">
+                <a href="" className="nav__link">
                   <svg
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fas"
                     data-icon="cogs"
-                    class="svg-inline--fa fa-cogs fa-w-20"
+                    className="svg-inline--fa fa-cogs fa-w-20"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 640 512"

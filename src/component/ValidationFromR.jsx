@@ -28,7 +28,7 @@ function FormExampleR() {
         <LogoApp />
         <Form.Row className="d-flex flex-column">
           <Form.Group className="" controlId="validationCustom06">
-            <i class="fa fa-user icon position-absolute"></i>
+            <i className="fa fa-user icon position-absolute"></i>
             <Form.Control
               className="mw-150 tid-15"
               type="text"
@@ -40,7 +40,7 @@ function FormExampleR() {
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group className="" controlId="validationCustom04">
-            <i class="fas fa-key icon position-absolute"></i>
+            <i className="fas fa-key icon position-absolute"></i>
             <Form.Control
               className="mw-150 tid-15"
               type="text"
@@ -52,7 +52,7 @@ function FormExampleR() {
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group className="" controlId="validationCustom04">
-            <i class="fas fa-key icon position-absolute"></i>
+            <i className="fas fa-key icon position-absolute"></i>
             <Form.Control
               className="mw-150 tid-15"
               type="text"
@@ -82,7 +82,7 @@ function FormExampleR() {
             ĐĂNG NHẬP
           </Button>
         </div>
-        <div class="position-absolute bottom-0 ml-60">
+        <div className="position-absolute bottom-0 ml-60">
           <p>Một sản phẩm của New Product Team</p>
         </div>
       </Form>

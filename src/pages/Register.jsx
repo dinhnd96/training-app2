@@ -4,19 +4,19 @@ import Row from "react-bootstrap/Row";
 import "../App.css";
 import CardHomePage from "../component/Card";
 import FormExampleR from "../component/ValidationFromR";
+import RegisterForm from "../component/RegisterForm";
 
 function Login() {
   return (
-    <div>
-      <Row>
-        <Col className="login-left p-0 vh-100">
-          <CardHomePage />
-        </Col>
-        <Col className="login-right d-flex bg-info-main">
-          <FormExampleR />
-        </Col>
-      </Row>
-    </div>
+    <Row className="vh-100 w-100">
+      <Col className="login-left p-0">
+        <CardHomePage />
+      </Col>
+      <Col className="login-right d-flex bg-info-main">
+        {/* <FormExampleR /> */}
+        <RegisterForm />
+      </Col>
+    </Row>
   );
 }
 
