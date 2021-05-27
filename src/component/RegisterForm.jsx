@@ -37,6 +37,7 @@ const create = async (values) => {
 
     console.log("data", data);
   } catch (error) {
+    alert("error", error);
     console.log("error", error);
   }
 };
@@ -66,7 +67,7 @@ function RegisterForm() {
           // same shape as initial values
           // console.log(values);
           create(values);
-          history.push("/login");
+          // history.push("/login");
         }}
       >
         {({ errors, touched }) => (

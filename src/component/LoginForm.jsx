@@ -5,10 +5,10 @@ import * as Yup from "yup";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import LogoApp from "./logo";
-import axios from "axios";
+import axios from "../helpers/axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage";
-
+const token = "";
 const SignupSchema = Yup.object().shape({
   username: Yup.string()
     .min(2, "Too Short!")
@@ -33,6 +33,7 @@ const login = async (values) => {
     console.log("error", error);
   }
 };
+
 function LoginForm() {
   const history = useHistory();
   return (
@@ -47,7 +48,7 @@ function LoginForm() {
           // same shape as initial values
           console.log(values);
           login(values);
-          history.push("/");
+          // history.push("/");
         }}
       >
         {({ errors, touched }) => (

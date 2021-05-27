@@ -1,17 +1,16 @@
-import axios from "axios";
-import { config } from "@/config";
+import Axios from "axios";
 
-const axiosInstance = axios.create({
+const axios = Axios.create({
   baseURL: "localhost:2017/",
 });
 
-axiosInstance.interceptors.request.use(async function (config) {
+axios.interceptors.request.use(async function (config) {
   const userToken = (await localStorage.getItem({ name: "userToken" })) || null;
   console.info({ userToken });
-  if (!!userToken) {
+  if (userToken) {
     config.headers.Authorization = `Bearer ${userToken}`;
   }
   return config;
 });
 
-export default axiosInstance;
+export default axios;
