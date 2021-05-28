@@ -1,5 +1,4 @@
 import Card from "react-bootstrap/Card";
-import BG from "../assets/welcome_bg.png";
 
 function CardHomePage() {
   return (

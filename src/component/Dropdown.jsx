@@ -9,6 +9,7 @@ function IconDropDown() {
             className="NavBar-icon mr-10"
             src="https://www.nintendoenthusiast.com/wp-content/uploads/2019/07/Psyduck.jpg"
             width="50"
+            alt=""
           ></img>
           <p className="m-auto">Vịt Bối Dối</p>
         </Dropdown.Toggle>

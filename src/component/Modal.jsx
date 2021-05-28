@@ -1,8 +1,22 @@
-import Modal from "react-bootstrap/Modal";
+import { Field, Form, Formik } from 'formik';
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
-import React from "react";
+import Modal from "react-bootstrap/Modal";
+import * as Yup from 'yup';
 import Table from "../assets/Bàn-trà-tròn-Turning-table-WT014-1.jpg";
-import { useState } from "react";
+
+const SignupSchema = Yup.object().shape({
+  firstName: Yup.string()
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  lastName: Yup.string()
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+});
+
 function MyVerticallyCenteredModal(props) {
   return (
     <Modal
@@ -16,65 +30,75 @@ function MyVerticallyCenteredModal(props) {
           THÊM MỚI ĐỒ VẬT
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body className="d-flex">
-        <div className="addvalue-dashboard-left">
-          <div className="addvalue-dashboard-left-input">
-            <p>Tên sản phẩm</p>
-            <input></input>
-          </div>
+      <Formik
+        initialValues={{
+          firstName: '',
+          lastName: '',
+          email: '',
+        }}
+        validationSchema={SignupSchema}
+        onSubmit={values => {
+          // same shape as initial values
+          console.log(values);
+        }}
+      >
+        {({ errors, touched }) => (
+          <Form>
+            <div className="d-flex">
+              <div className="addvalue-dashboard-left d-flex flex-column">
+                <div className="addvalue-dashboard-left-input">
+                  <label htmlFor="firstName">Tên sản phẩm</label>
+                  <Field name="firstName" placeholder="Jane" />
+                  {errors.firstName && touched.firstName ? (
+                    <div>{errors.firstName}</div>
+                  ) : null}
+                </div>
 
-          <div className="addvalue-dashboard-left-input">
-            <p>Tên viết tắt</p>
-            <input></input>
-          </div>
+                <label htmlFor="firstName">Tên viết tắt</label>
+                <Field name="lastName" />
+                {errors.lastName && touched.lastName ? (
+                  <div>{errors.lastName}</div>
+                ) : null}
 
-          <div className="addvalue-dashboard-left-input">
-            <p>Tên sản phẩm</p>
-            <input></input>
-          </div>
+                <label htmlFor="firstName">Vị trí đặt sản phẩm</label>
+                <Field name="email" type="email" />
+                {errors.email && touched.email ? <div>{errors.email}</div> : null}
 
-          <div className="addvalue-dashboard-left-input">
-            <p>Vị trí đặt sản phẩm</p>
-            <input></input>
-          </div>
+                <label htmlFor="firstName">Hạn sử dung sản phẩm</label>
+                <Field name="email" type="email" />
+                {errors.email && touched.email ? <div>{errors.email}</div> : null}
 
-          <div className="addvalue-dashboard-left-input">
-            <p>Hạn sử dung sản phẩm</p>
-            <input></input>
-          </div>
+                <label htmlFor="firstName">Lựa chọn công dụng</label>
+                <Field name="email" type="email" />
+                {errors.email && touched.email ? <div>{errors.email}</div> : null}
 
-          <div className="addvalue-dashboard-left-input icon2">
-            <p>Lựa chọn công dụng</p>
-            <input></input>
-          </div>
-        </div>
-        <div className="addvalue-dashboard-right">
-          <img src={Table} width="100%"></img>
-        </div>
-      </Modal.Body>
-      <div className="addvalue-dashboard-middle">
-        <p>Mô tả đồ vật</p>
-        <input></input>
-      </div>
-      <Modal.Footer className="justify-content-between">
-        <Button onClick={props.onHide}>Hủy</Button>
-        <Button onClick={props.onHide}>Lưu và thêm mới</Button>
-      </Modal.Footer>
+              </div>
+              <div className="addvalue-dashboard-right">
+                <img src={Table} width="100%"></img>
+              </div>
+            </div>
+            <div className="addvalue-dashboard-middle">
+              <p>Mô tả đồ vật</p>
+              <Field id="lastName" name="lastName" placeholder="Doe" /></div>
+
+            <Modal.Footer className="justify-content-between">
+              <Button onClick={props.onHide}>Hủy</Button>
+              <Button type="submit">Lưu và thêm mới</Button>
+            </Modal.Footer>
+          </Form>
+        )}
+      </Formik>
     </Modal>
   );
 }
 
 function App() {
-  const [modalShow, setModalShow] = useState(false);
+  const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <>
-      <Button
-        className="tid-10"
-        variant="primary"
-        onClick={() => setModalShow(true)}
-      >
-        THÊM MỚI ĐỒ VẬT
+      <Button variant="primary" onClick={() => setModalShow(true)}>
+        Launch vertically centered modal
       </Button>
 
       <MyVerticallyCenteredModal

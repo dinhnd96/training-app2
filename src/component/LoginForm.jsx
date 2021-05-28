@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { Formik, Form, Field } from "formik";
-import * as Yup from "yup";
-import Container from "react-bootstrap/Container";
+import { Field, Form, Formik } from "formik";
+import React from "react";
 import Button from "react-bootstrap/Button";
-import LogoApp from "./logo";
+import Container from "react-bootstrap/Container";
+import * as Yup from "yup";
 import axios from "../helpers/axios";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-const token = "";
+import LogoApp from "./logo";
 const SignupSchema = Yup.object().shape({
   username: Yup.string()
     .min(2, "Too Short!")
@@ -22,20 +18,25 @@ const SignupSchema = Yup.object().shape({
 
 const login = async (values) => {
   try {
-    const { data } = await axios.post("http://localhost:2017/user/login", {
+    const { data } = await axios.post("http://localhost:27017/user/login", {
       username: values.username,
       password: values.password,
     });
-    localStorage.setItem("token", data.token);
-
     console.log("data", data);
+    if (data.token) {
+      localStorage.setItem("token", data.token);
+      alert("Đăng nhập thành công")
+      
+    } 
+    
   } catch (error) {
+    alert("Đăng nhập ngu vl");
     console.log("error", error);
   }
 };
 
 function LoginForm() {
-  const history = useHistory();
+
   return (
     <Container className="d-flex m-auto justify-content-center h-80">
       <Formik

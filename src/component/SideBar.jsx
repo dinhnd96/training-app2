@@ -6,17 +6,17 @@ import home from "../assets/home-solid.svg";
 function SideBar() {
   return (
     <div className="sidenav flex-column">
-      <a className="sidenav-icon" href="#">
-        <img width="30" src={menubar}></img>
+      <a className="sidenav-icon" href="/">
+        <img alt="" width="30" src={menubar} ></img>
       </a>
-      <a className="sidenav-icon" href="#">
-        <img width="30" src={home}></img>
+      <a className="sidenav-icon" href="/">
+        <img alt="" width="30" src={home}></img>
       </a>
-      <a className="sidenav-icon" href="#">
-        <img width="30" src={cogs}></img>
+      <a className="sidenav-icon" href="/">
+        <img alt="" width="30" src={cogs} ></img>
       </a>
-      <a className="sidenav-icon" href="#">
-        <img width="30" src={celendar}></img>
+      <a className="sidenav-icon" href="/">
+        <img alt="" width="30" src={celendar} ></img>
       </a>
     </div>
   );

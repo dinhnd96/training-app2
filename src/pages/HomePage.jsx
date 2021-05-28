@@ -9,83 +9,86 @@ import MyVerticallyCenteredModal from "../component/Modal";
 import NavBarPage from "../component/NavBar";
 import SideBar from "../component/SideBar";
 import SideBarMobile from "../component/Sidebar-mobile";
-const getToken = localStorage.getItem("token");
-console.log("token", getToken);
+import {useState} from 'react'
+const originData = [
+  {
+    img: Lotus,
+    name: "Sen Đá",
+    decore: "Trang trí",
+    description: "Một vật dụng bày trong phòng",
+  },
+  {
+    img: Chair3,
+    name: "Ghế tựa",
+    decore: "Trang trí",
+    description: "Một vật dụng bày trong phòng",
+  },
+  {
+    img: Table,
+    name: "Bàn tựa",
+    decore: "Trang trí",
+    description: "Một vật dụng bày trong phòng",
+  },
+  {
+    img: Table,
+    name: "Bàn tựa",
+    decore: "Trang trí",
+    description: "Một vật dụng bày trong phòng",
+  },
+  {
+    img: Lotus,
+    name: "Sen Đá",
+    decore: "Trang trí",
+    description: "Một vật dụng bày trong phòng",
+  },
+  {
+    img: Chair3,
+    name: "Ghế tựa",
+    decore: "Trang trí",
+    description: "Một vật dụng bày trong phòng",
+  },
+  {
+    img: Table,
+    name: "Bàn tựa",
+    decore: "Trang trí",
+    description: "Một vật dụng bày trong phòng",
+  },
+  {
+    img: Table,
+    name: "Bàn tựa",
+    decore: "Trang trí",
+    description: "Một vật dụng bày trong phòng",
+  },
+  {
+    img: Lotus,
+    name: "Sen Đá",
+    decore: "Trang trí",
+    description: "Một vật dụng bày trong phòng",
+  },
+  {
+    img: Chair3,
+    name: "Ghế tựa",
+    decore: "Trang trí",
+    description: "Một vật dụng bày trong phòng",
+  },
+  {
+    img: Table,
+    name: "Bàn tựa",
+    decore: "Trang trí",
+    description: "Một vật dụng bày trong phòng",
+  },
+  {
+    img: Table,
+    name: "Bàn tựa",
+    decore: "Trang trí",
+    description: "Một vật dụng bày trong phòng",
+  },
+];
+
+
 function HomePage() {
-  const data = [
-    {
-      img: Lotus,
-      name: "Sen Đá",
-      decore: "Trang trí",
-      description: "Một vật dụng bày trong phòng",
-    },
-    {
-      img: Chair3,
-      name: "Ghế tựa",
-      decore: "Trang trí",
-      description: "Một vật dụng bày trong phòng",
-    },
-    {
-      img: Table,
-      name: "Bàn tựa",
-      decore: "Trang trí",
-      description: "Một vật dụng bày trong phòng",
-    },
-    {
-      img: Table,
-      name: "Bàn tựa",
-      decore: "Trang trí",
-      description: "Một vật dụng bày trong phòng",
-    },
-    {
-      img: Lotus,
-      name: "Sen Đá",
-      decore: "Trang trí",
-      description: "Một vật dụng bày trong phòng",
-    },
-    {
-      img: Chair3,
-      name: "Ghế tựa",
-      decore: "Trang trí",
-      description: "Một vật dụng bày trong phòng",
-    },
-    {
-      img: Table,
-      name: "Bàn tựa",
-      decore: "Trang trí",
-      description: "Một vật dụng bày trong phòng",
-    },
-    {
-      img: Table,
-      name: "Bàn tựa",
-      decore: "Trang trí",
-      description: "Một vật dụng bày trong phòng",
-    },
-    {
-      img: Lotus,
-      name: "Sen Đá",
-      decore: "Trang trí",
-      description: "Một vật dụng bày trong phòng",
-    },
-    {
-      img: Chair3,
-      name: "Ghế tựa",
-      decore: "Trang trí",
-      description: "Một vật dụng bày trong phòng",
-    },
-    {
-      img: Table,
-      name: "Bàn tựa",
-      decore: "Trang trí",
-      description: "Một vật dụng bày trong phòng",
-    },
-    {
-      img: Table,
-      name: "Bàn tựa",
-      decore: "Trang trí",
-      description: "Một vật dụng bày trong phòng",
-    },
-  ];
+  const [data] = useState(originData)
+  
   const renderCardProduct = () => {
     return data.map((value, index) => {
       return (
@@ -99,6 +102,7 @@ function HomePage() {
       );
     });
   };
+
   return (
     <Container>
       <SideBarMobile />
@@ -117,8 +121,8 @@ function HomePage() {
           </div>
           <div className="Left-page col-3">
             <div className="Left-page-head d-flex pb-20 pt-60">
-              <a className="mr-10" href="#">
-                <img src={celendar} width="40"></img>
+              <a className="mr-10" href="/">
+                <img alt="" src={celendar} width="40"></img>
               </a>
               <h4>JUNE</h4>
             </div>
@@ -140,6 +144,7 @@ function HomePage() {
                   src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX36256163.jpg"
                   width="200"
                   height="200"
+                  alt=""
                 ></img>
               </div>
               <div className="position-absolute bottom-0 fs-15">

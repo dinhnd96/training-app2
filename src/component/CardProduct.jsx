@@ -3,7 +3,7 @@ function CardProduct({ img, name, decore, description }) {
   return (
     <div className="Product">
       <div className="Product-img">
-        <img src={img} width="100%" />
+        <img alt="" src={img} width="100%" />
       </div>
       <div className="Product-content ">
         <h6>{name}</h6>

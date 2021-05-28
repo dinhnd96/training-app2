@@ -2,7 +2,7 @@ function SideBarMobile() {
   return (
     <div className="main">
       <div className="nav">
-        <label for="nav-mobile-input" className="nav-bars-btn">
+        <label htmlFor="nav-mobile-input" className="nav-bars-btn">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -24,11 +24,11 @@ function SideBarMobile() {
           className="nav-input"
           id="nav-mobile-input"
         ></input>
-        <label className="nav__overlay" for="nav-mobile-input"></label>
+        <label className="nav__overlay" htmlFor="nav-mobile-input"></label>
 
         <nav className="nav__mobile">
           <ul className="nav__mobile-list">
-            <label className="nav__mobile-close" for="nav-mobile-input">
+            <label className="nav__mobile-close" htmlFor="nav-mobile-input">
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -50,12 +50,13 @@ function SideBarMobile() {
                 className="NavBar-icon mr-10"
                 src="https://www.nintendoenthusiast.com/wp-content/uploads/2019/07/Psyduck.jpg"
                 width="50"
+                alt=""
               ></img>
               <p className="m-auto">Vịt Bối Dối</p>
             </div>
             <ul className="nav__list">
               <li>
-                <a href="" className="nav__link">
+                <a className="nav__link" href="/">
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -65,6 +66,7 @@ function SideBarMobile() {
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512"
+
                   >
                     <path
                       fill="currentColor"
@@ -74,7 +76,7 @@ function SideBarMobile() {
                 </a>
               </li>
               <li>
-                <a href="" className="nav__link">
+                <a className="nav__link" href="/">
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -84,6 +86,7 @@ function SideBarMobile() {
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
+
                   >
                     <path
                       fill="currentColor"
@@ -93,7 +96,7 @@ function SideBarMobile() {
                 </a>
               </li>
               <li>
-                <a href="" className="nav__link">
+                <a className="nav__link" href="/">
                   <svg
                     aria-hidden="true"
                     focusable="false"
