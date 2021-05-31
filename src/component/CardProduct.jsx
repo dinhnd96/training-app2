@@ -1,19 +1,25 @@
-import MyVerticallyCenteredModal from "./Modal";
-function CardProduct({ img, name, decore, description }) {
+import React from "react";
+
+function CardProduct({ img, productName, productUse, productDescription, openModal }) {
+
+
   return (
-    <div className="Product">
-      <div className="Product-img">
-        <img alt="" src={img} width="100%" />
-      </div>
-      <div className="Product-content ">
-        <h6>{name}</h6>
-        <span className="active">{decore}</span>
-        <p className="text-start text-wrap">{description}</p>
-        <div className="add-product-hidden">
-          <MyVerticallyCenteredModal />
+    <>
+      <div className="Product" onClick={() => openModal(true)}>
+        <div className="Product-img">
+          <img alt="" src={img} width="100%" />
+        </div>
+        <div className="Product-content ">
+          <h6>{productName}</h6>
+          <span className="active">{productUse}</span>
+          <p className="text-start text-wrap">{productDescription}</p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 export default CardProduct;
+
+
+
+

@@ -1,5 +1,6 @@
+import { useState } from 'react';
+import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Table from "../assets/Bàn-trà-tròn-Turning-table-WT014-1.jpg";
 import celendar from "../assets/calendar-alt-solid.svg";
 import Chair3 from "../assets/Chair3.jpg";
 import Lotus from "../assets/Lotus.jpg";
@@ -9,99 +10,72 @@ import MyVerticallyCenteredModal from "../component/Modal";
 import NavBarPage from "../component/NavBar";
 import SideBar from "../component/SideBar";
 import SideBarMobile from "../component/Sidebar-mobile";
-import {useState} from 'react'
+import UpdateProduct from '../component/UpdateProduct';
 const originData = [
   {
+    id: 1,
     img: Lotus,
-    name: "Sen Đá",
-    decore: "Trang trí",
-    description: "Một vật dụng bày trong phòng",
+    productName: "Sen Đá",
+    productUse: "Trang trí",
+    productDescription: "Một vật dụng bày trong phòng",
   },
   {
+    id: 2,
     img: Chair3,
-    name: "Ghế tựa",
-    decore: "Trang trí",
-    description: "Một vật dụng bày trong phòng",
-  },
-  {
-    img: Table,
-    name: "Bàn tựa",
-    decore: "Trang trí",
-    description: "Một vật dụng bày trong phòng",
-  },
-  {
-    img: Table,
-    name: "Bàn tựa",
-    decore: "Trang trí",
-    description: "Một vật dụng bày trong phòng",
-  },
-  {
+    productName: "Ghế tựa",
+    productUse: "Trang trí",
+    productDescription: "Một vật dụng bày trong phòng",
+  }, {
+    id: 3,
     img: Lotus,
-    name: "Sen Đá",
-    decore: "Trang trí",
-    description: "Một vật dụng bày trong phòng",
+    productName: "Sen Đá",
+    productUse: "Trang trí",
+    productDescription: "Một vật dụng bày trong phòng",
   },
   {
+    id: 4,
     img: Chair3,
-    name: "Ghế tựa",
-    decore: "Trang trí",
-    description: "Một vật dụng bày trong phòng",
-  },
-  {
-    img: Table,
-    name: "Bàn tựa",
-    decore: "Trang trí",
-    description: "Một vật dụng bày trong phòng",
-  },
-  {
-    img: Table,
-    name: "Bàn tựa",
-    decore: "Trang trí",
-    description: "Một vật dụng bày trong phòng",
-  },
-  {
-    img: Lotus,
-    name: "Sen Đá",
-    decore: "Trang trí",
-    description: "Một vật dụng bày trong phòng",
-  },
-  {
-    img: Chair3,
-    name: "Ghế tựa",
-    decore: "Trang trí",
-    description: "Một vật dụng bày trong phòng",
-  },
-  {
-    img: Table,
-    name: "Bàn tựa",
-    decore: "Trang trí",
-    description: "Một vật dụng bày trong phòng",
-  },
-  {
-    img: Table,
-    name: "Bàn tựa",
-    decore: "Trang trí",
-    description: "Một vật dụng bày trong phòng",
+    productName: "Ghế tựa",
+    productUse: "Trang trí",
+    productDescription: "Một vật dụng bày trong phòng",
   },
 ];
 
-
 function HomePage() {
-  const [data] = useState(originData)
+  const [show, setShow] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
+
+
+
   
+
+  const [data, setData] = useState(originData)
+
   const renderCardProduct = () => {
     return data.map((value, index) => {
       return (
         <CardProduct
+          id={value?.id}
           img={value?.img}
-          name={value?.name}
-          decore={value?.decore}
-          description={value?.description}
+          productName={value?.productName}
+          productUse={value?.productUse}
+          productDescription={value?.productDescription}
           key={index}
+          openModal={setShow}
         />
       );
     });
   };
+
+  function addProduct(values) {
+    const newProduct = {
+      ...values,
+      img: Chair3
+    }
+    console.log(newProduct)
+    const newData = [...data, ...[newProduct]];
+    setData(newData);
+  }
 
   return (
     <Container>
@@ -113,10 +87,32 @@ function HomePage() {
           <div className="Right-page col-sm-9 w-70">
             <div className="Add-item-btn justify-content-end mr-10">
               <i className="fas fa-plus-circle icon"></i>
-              <MyVerticallyCenteredModal />
+
+              <Button
+                className="tid-10"
+                variant="primary"
+                onClick={() => setModalShow(true)}
+              >
+                THÊM MỚI ĐỒ VẬT
+               </Button>
+
+              <MyVerticallyCenteredModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                addProduct={addProduct}
+
+              />
+
             </div>
             <div className="Main-content d-flex flex-wrap">
               {renderCardProduct()}
+
+              <UpdateProduct
+                show={show}
+                onHide={() => setShow(false)}
+                dialogClassName="modal-90w"
+                aria-labelledby="example-custom-modal-styling-title"
+              />
             </div>
           </div>
           <div className="Left-page col-3">
