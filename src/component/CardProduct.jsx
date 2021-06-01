@@ -1,11 +1,15 @@
 import React from "react";
 
-function CardProduct({ img, productName, productUse, productDescription, openModal }) {
-
-
+function CardProduct({
+  img,
+  productName,
+  productUse,
+  productDescription,
+  openModal,
+}) {
   return (
     <>
-      <div className="Product" onClick={() => openModal(true)}>
+      <div className="Product" onClick={() => openModal()}>
         <div className="Product-img">
           <img alt="" src={img} width="100%" />
         </div>
@@ -19,7 +23,3 @@ function CardProduct({ img, productName, productUse, productDescription, openMod
   );
 }
 export default CardProduct;
-
-
-
-

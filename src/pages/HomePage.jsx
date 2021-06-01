@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import celendar from "../assets/calendar-alt-solid.svg";
@@ -10,7 +10,7 @@ import MyVerticallyCenteredModal from "../component/Modal";
 import NavBarPage from "../component/NavBar";
 import SideBar from "../component/SideBar";
 import SideBarMobile from "../component/Sidebar-mobile";
-import UpdateProduct from '../component/UpdateProduct';
+import UpdateProduct from "../component/UpdateProduct";
 const originData = [
   {
     id: 1,
@@ -25,7 +25,8 @@ const originData = [
     productName: "Ghế tựa",
     productUse: "Trang trí",
     productDescription: "Một vật dụng bày trong phòng",
-  }, {
+  },
+  {
     id: 3,
     img: Lotus,
     productName: "Sen Đá",
@@ -44,13 +45,11 @@ const originData = [
 function HomePage() {
   const [show, setShow] = useState(false);
   const [modalShow, setModalShow] = useState(false);
-
-
-
-  
-
-  const [data, setData] = useState(originData)
-
+  const [data, setData] = useState(originData);
+  const onCardClick = (value) => {
+    console.log(value);
+    setShow(true);
+  };
   const renderCardProduct = () => {
     return data.map((value, index) => {
       return (
@@ -61,7 +60,7 @@ function HomePage() {
           productUse={value?.productUse}
           productDescription={value?.productDescription}
           key={index}
-          openModal={setShow}
+          openModal={() => onCardClick(value)}
         />
       );
     });
@@ -70,10 +69,11 @@ function HomePage() {
   function addProduct(values) {
     const newProduct = {
       ...values,
-      img: Chair3
-    }
-    console.log(newProduct)
+      img: Chair3,
+    };
+    console.log(newProduct);
     const newData = [...data, ...[newProduct]];
+    console.log(newData);
     setData(newData);
   }
 
@@ -94,15 +94,13 @@ function HomePage() {
                 onClick={() => setModalShow(true)}
               >
                 THÊM MỚI ĐỒ VẬT
-               </Button>
+              </Button>
 
               <MyVerticallyCenteredModal
                 show={modalShow}
                 onHide={() => setModalShow(false)}
                 addProduct={addProduct}
-
               />
-
             </div>
             <div className="Main-content d-flex flex-wrap">
               {renderCardProduct()}
