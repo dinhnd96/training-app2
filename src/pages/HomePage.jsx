@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
+import { useDispatch, useSelector } from "react-redux";
 import celendar from "../assets/calendar-alt-solid.svg";
 import Chair3 from "../assets/Chair3.jpg";
 import Lotus from "../assets/Lotus.jpg";
@@ -43,12 +44,17 @@ const originData = [
 ];
 
 function HomePage() {
+  const dispatch = useDispatch();
+  const offlineData = useSelector((state) => state.product);
+  const [onClickData, setOnClickData] = useState({});
   const [show, setShow] = useState(false);
   const [modalShow, setModalShow] = useState(false);
   const [data, setData] = useState(originData);
+  const [inOnMode, setIsOnMode] = useState(false);
   const onCardClick = (value) => {
     console.log(value);
     setShow(true);
+    setOnClickData(value);
   };
   const renderCardProduct = () => {
     return data.map((value, index) => {
@@ -69,13 +75,25 @@ function HomePage() {
   function addProduct(values) {
     const newProduct = {
       ...values,
+      id: data.length + 1,
       img: Chair3,
     };
+    console.log("newProduct", newProduct);
     console.log(newProduct);
     const newData = [...data, ...[newProduct]];
     console.log(newData);
     setData(newData);
+    setModalShow(false);
   }
+
+  const updateProduct = (values) => {};
+
+  const onDeleteProduct = () => {
+    console.log(onClickData.id);
+    data.splice(onClickData.id - 1, 1);
+    console.log(data);
+    setShow(false);
+  };
 
   return (
     <Container>
@@ -106,10 +124,12 @@ function HomePage() {
               {renderCardProduct()}
 
               <UpdateProduct
+                updateProduct={updateProduct}
                 show={show}
                 onHide={() => setShow(false)}
                 dialogClassName="modal-90w"
                 aria-labelledby="example-custom-modal-styling-title"
+                onDelete={onDeleteProduct}
               />
             </div>
           </div>

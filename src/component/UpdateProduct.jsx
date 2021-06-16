@@ -58,6 +58,7 @@ const SignupSchema = Yup.object().shape({
 });
 
 function UpdateProduct(props) {
+  const { onDelete } = props;
   return (
     <Modal
       {...props}
@@ -82,7 +83,7 @@ function UpdateProduct(props) {
         }}
         validationSchema={SignupSchema}
         onSubmit={(values) => {
-          props.addProduct(values);
+          props.updateProduct(values);
         }}
       >
         {({ errors, touched }) => (
@@ -140,7 +141,7 @@ function UpdateProduct(props) {
             </div>
 
             <Modal.Footer className="justify-content-between">
-              <Button onClick={props.onHide}>Hủy</Button>
+              <Button onClick={onDelete}>Xóa</Button>
               <Button type="submit">Lưu và thêm mới</Button>
             </Modal.Footer>
           </Form>
