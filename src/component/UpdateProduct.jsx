@@ -25,8 +25,10 @@
 // }
 import { Field, Form, Formik } from "formik";
 import React, { useState } from "react";
+import { useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import { useSelector } from "react-redux";
 import * as Yup from "yup";
 import Table from "../assets/Bàn-trà-tròn-Turning-table-WT014-1.jpg";
 
@@ -58,6 +60,27 @@ const SignupSchema = Yup.object().shape({
 });
 
 function UpdateProduct(props) {
+  const offlineData = useSelector((state) => state.product);
+
+  const [initialValues, setInitialValues] = useState({
+    productName: "",
+    productShortName: "",
+    productPlace: "",
+    productExp: "",
+    productUse: "",
+    productDescription: "",
+    img: "",
+  });
+  useEffect(() => {
+    setInitialValues({
+      id: offline.id,
+      img: offline.img,
+      productDescription: offline.productDescription,
+      productName: offline.productName,
+      productUse: offline.productUse,
+    });
+  }, [offlineData]);
+  const offline = JSON.parse(localStorage.getItem("productOffline"));
   const { onDelete } = props;
   return (
     <Modal
@@ -73,12 +96,12 @@ function UpdateProduct(props) {
       </Modal.Header>
       <Formik
         initialValues={{
-          productName: "",
-          productShortName: "",
-          productPlace: "",
-          productExp: "",
-          productUse: "",
-          productDescription: "",
+          productName: offline.productName,
+          productShortName: offline.productName,
+          productPlace: offline.productUse,
+          productExp: offline.productUse,
+          productUse: offline.productUse,
+          productDescription: offline.productDescription,
           img: "",
         }}
         validationSchema={SignupSchema}
@@ -88,10 +111,10 @@ function UpdateProduct(props) {
       >
         {({ errors, touched }) => (
           <Form>
-            <div className="d-flex">
+            <div className="d-flex modal-body">
               <div className="addvalue-dashboard-left d-flex flex-column">
                 <label htmlFor="productName">Tên sản phẩm</label>
-                <Field name="productName" placeholder="Jane" />
+                <Field name="productName" />
                 {errors.productName && touched.productName ? (
                   <div>{errors.productName}</div>
                 ) : null}
@@ -130,11 +153,7 @@ function UpdateProduct(props) {
             </div>
             <div className="addvalue-dashboard-middle">
               <label htmlFor="productDescription">Mô tả đồ vật</label>
-              <Field
-                id="productDescription"
-                name="productDescription"
-                placeholder="Doe"
-              />
+              <Field id="productDescription" name="productDescription" />
               {errors.productDescription && touched.productDescription ? (
                 <div>{errors.productDescription}</div>
               ) : null}

@@ -1,19 +1,14 @@
 import { EDIT_PRODUCT } from "./productType";
 
-const initialValues = {
-  productName: "",
-  productShortName: "",
-  productPlace: "",
-  productExp: "",
-  productUse: "",
-  productDescription: "",
-  img: "",
-};
+const initialValues = [];
 
 const productReducer = (state = initialValues, action) => {
   switch (action.type) {
     case EDIT_PRODUCT:
-      return state;
+      const newState = action.product;
+      console.log(action);
+      localStorage.setItem("productOffline", JSON.stringify(newState));
+      return [...state, newState];
     default:
       return state;
   }

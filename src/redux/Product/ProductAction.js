@@ -1,18 +1,16 @@
 import { EDIT_PRODUCT } from "./productType";
+import { ADD_PRODUCT } from "./productType";
 
-const product = {
-  productName,
-  productShortName,
-  productPlace,
-  productExp,
-  productUse,
-  productDescription,
-  img,
-};
-
-export const editProduct = () => {
+export const editProduct = (product) => {
   return {
     type: EDIT_PRODUCT,
+    product,
+  };
+};
+
+export const addProduct = (product) => {
+  return {
+    type: ADD_PRODUCT,
     payload: product,
   };
 };

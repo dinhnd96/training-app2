@@ -4,6 +4,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import ProgressBar from "react-bootstrap/ProgressBar";
+
 import * as Yup from "yup";
 import LogoApp from "./logo";
 
@@ -25,14 +26,13 @@ const SignupSchema = Yup.object().shape({
 
 const create = async (values) => {
   try {
-    const { data } = await axios.post("http://localhost:27017/user/create", {
+    const { data } = await axios.post("http://localhost:2017/user/create", {
       username: values.username,
       email: values.email,
       password: values.password,
     });
-
     console.log("data", data);
-    alert("Đăng ký thành công")
+    alert("Đăng ký thành công");
   } catch (error) {
     alert("Tên đăng nhập hoặc email đã được sử dụng");
     console.log("error", error);

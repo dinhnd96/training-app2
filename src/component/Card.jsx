@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 
 function CardHomePage() {
   return (
-    <Card className="bg-dark text-primary text-center">
+    <Card className="text-primary text-center">
       <Card.ImgOverlay>
         <Card.Title>
           <h1>WELCOME TO</h1>

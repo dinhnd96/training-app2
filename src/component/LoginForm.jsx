@@ -5,6 +5,8 @@ import Container from "react-bootstrap/Container";
 import * as Yup from "yup";
 import axios from "../helpers/axios";
 import LogoApp from "./logo";
+import { useHistory } from "react-router-dom";
+
 const SignupSchema = Yup.object().shape({
   username: Yup.string()
     .min(2, "Too Short!")
@@ -18,24 +20,23 @@ const SignupSchema = Yup.object().shape({
 
 const login = async (values) => {
   try {
-    const { data } = await axios.post("http://localhost:27017/user/login", {
+    const { data } = await axios.post("http://localhost:2017/user/login", {
       username: values.username,
       password: values.password,
     });
     console.log("data", data);
     if (data.token) {
       localStorage.setItem("token", data.token);
-      alert("Đăng nhập thành công")
-      
-    } 
-    
+      alert("Đăng nhập thành công");
+    }
   } catch (error) {
-    alert("Đăng nhập ngu vl");
+    alert("Đăng nhập thất bại");
     console.log("error", error);
   }
 };
 
 function LoginForm() {
+  const history = useHistory();
 
   return (
     <Container className="d-flex m-auto justify-content-center h-80">
@@ -49,7 +50,6 @@ function LoginForm() {
           // same shape as initial values
           console.log(values);
           login(values);
-          // history.push("/");
         }}
       >
         {({ errors, touched }) => (

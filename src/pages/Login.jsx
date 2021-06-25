@@ -9,7 +9,7 @@ import LoginForm from "../component/LoginForm";
 
 function Login() {
   return (
-    <Row className="vh-100 w-100">
+    <Row className="vh-100 w-100 ml-0">
       <Col className="login-left p-0 vh-100 " style={{ backgoundImage: BG }}>
         <CardHomePage />
       </Col>

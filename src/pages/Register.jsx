@@ -7,7 +7,7 @@ import RegisterForm from "../component/RegisterForm";
 
 function Login() {
   return (
-    <Row className="vh-100 w-100">
+    <Row className="vh-100 w-100 ml-0">
       <Col className="login-left p-0">
         <CardHomePage />
       </Col>
