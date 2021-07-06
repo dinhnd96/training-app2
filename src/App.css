@@ -94,10 +94,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-.login-left {
-  background-size: cover;
-  background-image: url(https://thumbs.dreamstime.com/z/modern-industrial-building-isolated-vector-icon-heavy-factory-power-plant-manufactory-technology-illustration-flat-93911715.jpg);
-}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -332,10 +329,14 @@ body {
   font-size: 14px;
 }
 
-.Product-content span {
-  border-radius: 8px;
-  border: 1px solid rgb(54, 54, 54);
+.Product-content .active {
+  border: 1px solid;
+  width: 105px;
+  border-radius: 16px;
+  text-indent: 5px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .Navbar-Page {

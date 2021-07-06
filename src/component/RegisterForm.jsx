@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Field, Form, Formik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import ProgressBar from "react-bootstrap/ProgressBar";
@@ -50,6 +50,7 @@ const create = async (values) => {
 //   }
 // };
 function RegisterForm() {
+  const [isChecked, setIsChecked] = useState(false);
   return (
     <Container className="d-flex m-auto justify-content-center h-80">
       <Formik
@@ -95,7 +96,14 @@ function RegisterForm() {
                 className="w-100 tid-15"
                 name="password"
                 placeholder="Mật khẩu"
+                type={isChecked ? "text" : "password"}
               />
+              <input
+                type="checkbox"
+                onChange={(e) => setIsChecked(e.target.checked)}
+                checked={isChecked}
+              />
+              Show Password
               {errors.password && touched.password ? (
                 <div>{errors.password}</div>
               ) : null}
@@ -105,9 +113,11 @@ function RegisterForm() {
                 <p>Mật khẩu đặt chuẩn</p>
               </div>
               <ProgressBar className="progess-bar">
-                <ProgressBar striped variant="success" now={33} key={1} />
-                <ProgressBar variant="warning" now={33} key={2} />
-                <ProgressBar striped variant="danger" now={34} key={3} />
+                {errors.password && touched.password ? (
+                  <ProgressBar striped variant="danger" now={50} key={1} />
+                ) : (
+                  <ProgressBar striped variant="success" now={100} key={2} />
+                )}
               </ProgressBar>
             </div>
             <div className="password-progess-bar-input d-flex justify-content-between">

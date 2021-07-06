@@ -61,26 +61,7 @@ const SignupSchema = Yup.object().shape({
 
 function UpdateProduct(props) {
   const offlineData = useSelector((state) => state.product);
-
-  const [initialValues, setInitialValues] = useState({
-    productName: "",
-    productShortName: "",
-    productPlace: "",
-    productExp: "",
-    productUse: "",
-    productDescription: "",
-    img: "",
-  });
-  useEffect(() => {
-    setInitialValues({
-      id: offline.id,
-      img: offline.img,
-      productDescription: offline.productDescription,
-      productName: offline.productName,
-      productUse: offline.productUse,
-    });
-  }, [offlineData]);
-  const offline = JSON.parse(localStorage.getItem("productOffline"));
+  console.log("offlineData", offlineData);
   const { onDelete } = props;
   return (
     <Modal
@@ -91,17 +72,17 @@ function UpdateProduct(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          THÊM MỚI ĐỒ VẬT
+          Sửa Thông Tin Đồ Vật
         </Modal.Title>
       </Modal.Header>
       <Formik
         initialValues={{
-          productName: offline.productName,
-          productShortName: offline.productName,
-          productPlace: offline.productUse,
-          productExp: offline.productUse,
-          productUse: offline.productUse,
-          productDescription: offline.productDescription,
+          productName: offlineData.productName,
+          productShortName: offlineData.productName,
+          productPlace: offlineData.productUse,
+          productExp: offlineData.productUse,
+          productUse: offlineData.productUse,
+          productDescription: offlineData.productDescription,
           img: "",
         }}
         validationSchema={SignupSchema}
@@ -132,17 +113,18 @@ function UpdateProduct(props) {
                 ) : null}
 
                 <label htmlFor="firstName">Hạn sử dung sản phẩm</label>
-                <Field name="productExp" type="productExp" />
+                <Field name="productExp" type="date"></Field>
                 {errors.productExp && touched.productExp ? (
                   <div>{errors.productExp}</div>
                 ) : null}
 
                 <label htmlFor="firstName">Lựa chọn công dụng</label>
-                <Field name="productUse" type="productUse" />
-                {errors.productUse && touched.productUse ? (
-                  <div>{errors.productUse}</div>
-                ) : null}
-                <label htmlFor="firstName">Lựa chọn công dụng</label>
+                <Field as="select" name="productUse" type="productUse">
+                  <option value="Trang Trí">Trang Trí</option>
+                  <option value="Trang Trí 2">Trang Trí 2</option>
+                  <option value="Trang Trí 3">Trang Trí 3</option>
+                </Field>
+                <label htmlFor="firstName">Lựa chọn công ảnh</label>
 
                 <Field type="file" id="myfile" name="img" />
                 {errors.img && touched.img ? <div>{errors.img}</div> : null}

@@ -83,18 +83,18 @@ function MyVerticallyCenteredModal(props) {
                 ) : null}
 
                 <label htmlFor="firstName">Hạn sử dung sản phẩm</label>
-                <Field name="productExp" type="productExp" />
+                <Field name="productExp" type="date"></Field>
                 {errors.productExp && touched.productExp ? (
                   <div>{errors.productExp}</div>
                 ) : null}
 
                 <label htmlFor="firstName">Lựa chọn công dụng</label>
-                <Field name="productUse" type="productUse" />
-                {errors.productUse && touched.productUse ? (
-                  <div>{errors.productUse}</div>
-                ) : null}
-                <label htmlFor="firstName">Lựa chọn công dụng</label>
-
+                <Field as="select" name="productUse" type="productUse">
+                  <option value="Trang Trí">Trang Trí</option>
+                  <option value="Trang Trí 2">Trang Trí 2</option>
+                  <option value="Trang Trí 3">Trang Trí 3</option>
+                </Field>
+                <label htmlFor="firstName">Lựa chọn ảnh</label>
                 <Field type="file" id="myfile" name="img" />
                 {errors.img && touched.img ? <div>{errors.img}</div> : null}
               </div>

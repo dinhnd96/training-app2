@@ -15,7 +15,7 @@ function CardProduct({
         </div>
         <div className="Product-content ">
           <h6>{productName}</h6>
-          <span className="active">{productUse}</span>
+          <div className="active">{productUse}</div>
           <p className="text-start text-wrap">{productDescription}</p>
         </div>
       </div>

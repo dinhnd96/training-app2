@@ -50,7 +50,6 @@ const originData = [
 function HomePage() {
   useEffect(() => {
     const localData = JSON.parse(localStorage.getItem("data"));
-
     if (localData) {
       setData(localData);
     }

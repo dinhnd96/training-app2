@@ -8,7 +8,7 @@ const productReducer = (state = initialValues, action) => {
       const newState = action.product;
       console.log(action);
       localStorage.setItem("productOffline", JSON.stringify(newState));
-      return [...state, newState];
+      return action.product;
     default:
       return state;
   }
