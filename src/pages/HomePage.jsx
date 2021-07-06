@@ -63,7 +63,6 @@ function HomePage() {
 
   const onCardClick = (value) => {
     dispatch(editProduct(value));
-    console.log(value);
     setShow(true);
     setOnClickData(value);
   };
@@ -84,10 +83,11 @@ function HomePage() {
   };
   function randomImg() {
     const newImg = [Chair3, Lotus, Table];
-    const randomIndex = Math.trunc(Math.random() * 6);
+    const randomIndex = Math.trunc(Math.random() * 3);
     return newImg[randomIndex];
   }
   function addProduct(values) {
+    console.log("AKHSKHSHASHJASHJS", values);
     const newProduct = {
       ...values,
       id: data.length + 1,

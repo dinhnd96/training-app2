@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import * as Yup from "yup";
-import Table from "../assets/Bàn-trà-tròn-Turning-table-WT014-1.jpg";
 
 const SignupSchema = Yup.object().shape({
   productName: Yup.string()
@@ -33,6 +32,12 @@ const SignupSchema = Yup.object().shape({
 });
 
 function MyVerticallyCenteredModal(props) {
+  const [file, setFile] = useState(null);
+
+  const fileHandler = (e) => {
+    setFile(e.target.files[0]);
+    console.log("KHDHAAHSHSHAS", file);
+  };
   return (
     <Modal
       {...props}
@@ -57,7 +62,12 @@ function MyVerticallyCenteredModal(props) {
         }}
         validationSchema={SignupSchema}
         onSubmit={(values) => {
-          props.addProduct(values);
+          const img = file;
+          console.log("img", img);
+          const valuess = { ...values, img };
+          console.log("valuess", valuess);
+          console.log("AHJSHSASHAHAS", values);
+          props.addProduct(valuess);
         }}
       >
         {({ errors, touched }) => (
@@ -95,11 +105,20 @@ function MyVerticallyCenteredModal(props) {
                   <option value="Trang Trí 3">Trang Trí 3</option>
                 </Field>
                 <label htmlFor="firstName">Lựa chọn ảnh</label>
-                <Field type="file" id="myfile" name="img" />
+                <Field
+                  type="file"
+                  id="myInput"
+                  name="img"
+                  onChange={fileHandler}
+                />
                 {errors.img && touched.img ? <div>{errors.img}</div> : null}
               </div>
               <div className="addvalue-dashboard-right">
-                <img src={Table} width="100%"></img>
+                <img
+                  src={file ? URL.createObjectURL(file) : null}
+                  alt={file ? file.name : null}
+                  width="100%"
+                ></img>
               </div>
             </div>
             <div className="addvalue-dashboard-middle">

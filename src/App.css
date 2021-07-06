@@ -367,7 +367,8 @@ body {
   border-radius: 20px;
 }
 .addvalue-dashboard-right {
-  width: 100%;
+  width: 420px;
+  height: 420px;
 }
 .Modal-footer-input {
   width: 100%;

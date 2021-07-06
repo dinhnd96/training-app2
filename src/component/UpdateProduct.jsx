@@ -61,7 +61,11 @@ const SignupSchema = Yup.object().shape({
 
 function UpdateProduct(props) {
   const offlineData = useSelector((state) => state.product);
-  console.log("offlineData", offlineData);
+  const [file, setFile] = useState(null);
+
+  const fileHandler = (e) => {
+    setFile(e.target.files[0]);
+  };
   const { onDelete } = props;
   return (
     <Modal
@@ -126,11 +130,20 @@ function UpdateProduct(props) {
                 </Field>
                 <label htmlFor="firstName">Lựa chọn công ảnh</label>
 
-                <Field type="file" id="myfile" name="img" />
+                <Field
+                  type="file"
+                  id="myfile"
+                  name="img"
+                  onChange={fileHandler}
+                />
                 {errors.img && touched.img ? <div>{errors.img}</div> : null}
               </div>
               <div className="addvalue-dashboard-right">
-                <img src={Table} width="100%"></img>
+                <img
+                  src={file ? URL.createObjectURL(file) : null}
+                  alt={file ? file.name : null}
+                  width="100%"
+                ></img>
               </div>
             </div>
             <div className="addvalue-dashboard-middle">
