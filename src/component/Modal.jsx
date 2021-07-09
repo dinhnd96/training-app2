@@ -35,6 +35,7 @@ function MyVerticallyCenteredModal(props) {
   const [file, setFile] = useState(null);
 
   const fileHandler = (e) => {
+    console.log(file);
     setFile(e.target.files[0]);
   };
   return (
@@ -74,20 +75,20 @@ function MyVerticallyCenteredModal(props) {
             <div className="d-flex modal-body">
               <div className="addvalue-dashboard-left d-flex flex-column b-r99">
                 <label htmlFor="productName">Tên sản phẩm</label>
-                <Field className=" b-r99" name="productName" />
+                <Field className=" b-r99 b1" name="productName" />
                 {errors.productName && touched.productName ? (
                   <div>{errors.productName}</div>
                 ) : null}
 
                 <label htmlFor="firstName">Tên viết tắt</label>
-                <Field className=" b-r99" name="productShortName" />
+                <Field className=" b-r99 b1" name="productShortName" />
                 {errors.productShortName && touched.productShortName ? (
                   <div>{errors.productShortName}</div>
                 ) : null}
 
                 <label htmlFor="firstName">Vị trí đặt sản phẩm</label>
                 <Field
-                  className=" b-r99"
+                  className=" b-r99 b1"
                   name="productPlace"
                   type="productPlace"
                 />
@@ -97,7 +98,7 @@ function MyVerticallyCenteredModal(props) {
 
                 <label htmlFor="firstName">Hạn sử dung sản phẩm</label>
                 <Field
-                  className=" b-r99 h-25"
+                  className="b-r99 b1 w-100 h-25 bg-white"
                   name="productExp"
                   type="date"
                 ></Field>
@@ -107,7 +108,7 @@ function MyVerticallyCenteredModal(props) {
 
                 <label htmlFor="firstName">Lựa chọn công dụng</label>
                 <Field
-                  className=" b-r99 h-25 b1"
+                  className="input b-r99 h-25 b1 bg-white"
                   as="select"
                   name="productUse"
                   type="productUse"

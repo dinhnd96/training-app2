@@ -1,6 +1,21 @@
 input:focus-visible {
   outline: none;
 }
+::-webkit-calendar-picker-indicator {
+  padding-right: 10px;
+}
+select {
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png)
+    no-repeat right #ddd;
+  -webkit-appearance: none;
+  background-position-x: 314px;
+}
+.input:focus-visible {
+  outline: none;
+}
+.bg-white {
+  background-color: rgb(255, 255, 255) !important;
+}
 .btn-outline-warning {
   color: #e9ecef !important;
   border-color: #e9ecef !important;
@@ -639,6 +654,12 @@ body {
 }
 /*Ipad*/
 @media (max-width: 768px) {
+  select {
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png)
+      no-repeat right #ddd;
+    -webkit-appearance: none;
+    background-position-x: 435px;
+  }
   .modal-body {
     flex-direction: column-reverse !important;
   }
@@ -713,6 +734,12 @@ body {
 }
 /* Mobile*/
 @media (max-width: 375px) {
+  select {
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png)
+      no-repeat right #ddd;
+    -webkit-appearance: none;
+    background-position-x: 279px;
+  }
   .Add-item-btn i {
     margin-left: 10px;
     position: absolute;

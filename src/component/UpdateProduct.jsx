@@ -79,31 +79,44 @@ function UpdateProduct(props) {
             <div className="d-flex modal-body">
               <div className="addvalue-dashboard-left d-flex flex-column">
                 <label htmlFor="productName">Tên sản phẩm</label>
-                <Field name="productName" />
+                <Field className=" b-r99 b1" name="productName" />
                 {errors.productName && touched.productName ? (
                   <div>{errors.productName}</div>
                 ) : null}
 
                 <label htmlFor="firstName">Tên viết tắt</label>
-                <Field name="productShortName" />
+                <Field className=" b-r99 b1" name="productShortName" />
                 {errors.productShortName && touched.productShortName ? (
                   <div>{errors.productShortName}</div>
                 ) : null}
 
                 <label htmlFor="firstName">Vị trí đặt sản phẩm</label>
-                <Field name="productPlace" type="productPlace" />
+                <Field
+                  className=" b-r99 b1"
+                  name="productPlace"
+                  type="productPlace"
+                />
                 {errors.productPlace && touched.productPlace ? (
                   <div>{errors.productPlace}</div>
                 ) : null}
 
                 <label htmlFor="firstName">Hạn sử dung sản phẩm</label>
-                <Field name="productExp" type="date"></Field>
+                <Field
+                  className="b-r99 b1 w-100 h-25 bg-white"
+                  name="productExp"
+                  type="date"
+                ></Field>
                 {errors.productExp && touched.productExp ? (
                   <div>{errors.productExp}</div>
                 ) : null}
 
                 <label htmlFor="firstName">Lựa chọn công dụng</label>
-                <Field as="select" name="productUse" type="productUse">
+                <Field
+                  className="input b-r99 h-25 b1 bg-white"
+                  as="select"
+                  name="productUse"
+                  type="productUse"
+                >
                   <option value="Trang Trí">Trang Trí</option>
                   <option value="Trang Trí 2">Trang Trí 2</option>
                   <option value="Trang Trí 3">Trang Trí 3</option>
