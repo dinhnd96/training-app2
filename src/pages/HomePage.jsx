@@ -16,36 +16,7 @@ import UpdateProduct from "../component/UpdateProduct";
 import { editProduct } from "../redux/Product/ProductAction";
 import _ from "lodash";
 
-const originData = [
-  {
-    id: 1,
-    img: Lotus,
-    productName: "Sen Đá",
-    productUse: "Trang trí",
-    productDescription: "Một vật dụng bày trong phòng",
-  },
-  {
-    id: 2,
-    img: Chair3,
-    productName: "Ghế tựa",
-    productUse: "Trang trí",
-    productDescription: "Một vật dụng bày trong phòng",
-  },
-  {
-    id: 3,
-    img: Lotus,
-    productName: "Sen Đá",
-    productUse: "Trang trí",
-    productDescription: "Một vật dụng bày trong phòng",
-  },
-  {
-    id: 4,
-    img: Chair3,
-    productName: "Ghế tựa",
-    productUse: "Trang trí",
-    productDescription: "Một vật dụng bày trong phòng",
-  },
-];
+const originData = [];
 
 function HomePage() {
   useEffect(() => {
@@ -81,17 +52,12 @@ function HomePage() {
       );
     });
   };
-  function randomImg() {
-    const newImg = [Chair3, Lotus, Table];
-    const randomIndex = Math.trunc(Math.random() * 3);
-    return newImg[randomIndex];
-  }
+
   function addProduct(values) {
     console.log("AKHSKHSHASHJASHJS", values);
     const newProduct = {
       ...values,
       id: data.length + 1,
-      img: randomImg(),
     };
     const newData = [...data, ...[newProduct]];
     setData(newData);
@@ -108,9 +74,10 @@ function HomePage() {
     data[index] = {
       ...data[index],
       ...values,
-      img: Chair3,
+      // img: randomImg(),
     };
     setData(data);
+    setShow(false);
     localStorage.setItem("data", JSON.stringify(data));
     console.log("offlineData", offlineData);
   };
@@ -131,10 +98,14 @@ function HomePage() {
         console.log("asdlkjhasdkjhasdkljhasd", o);
         return o.productName.indexOf(keyWord) !== -1;
       });
-      setData(abcd);
+      setTimeout(() => {
+        setData(abcd);
+      }, 1000);
     } else {
       const abcd = JSON.parse(localStorage.getItem("data"));
-      setData(abcd);
+      setTimeout(() => {
+        setData(abcd);
+      }, 1000);
     }
   };
 
@@ -143,14 +114,14 @@ function HomePage() {
       <SideBarMobile />
       <SideBar />
       <NavBarPage onSearch={onSearch} />
-      <Container className="d-flex primary-color">
+      <Container className="d-flex primary-color pb-40">
         <div className="row flex-grow-1">
           <div className=" Right-page col-sm-9 w-70 flex-grow-1">
             <div className="Add-item-btn justify-content-end mr-10">
-              <i className="fas fa-plus-circle icon"></i>
+              <i className="fas fa-plus-circle icon2"></i>
 
               <Button
-                className="tid-10"
+                className="tid-10 sm-btn"
                 variant="primary"
                 onClick={() => setModalShow(true)}
               >
@@ -204,7 +175,7 @@ function HomePage() {
                   alt=""
                 ></img>
               </div>
-              <div className="position-absolute bottom-0 fs-15">
+              <div className="position-absolute bottom-0 fs-13 superbot">
                 <p>Một sản phẩm của New Product Team</p>
               </div>
             </div>

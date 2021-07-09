@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import { useHistory } from "react-router-dom";
 
 import * as Yup from "yup";
 import LogoApp from "./logo";
@@ -50,7 +51,13 @@ const create = async (values) => {
 //   }
 // };
 function RegisterForm() {
-  const [isChecked, setIsChecked] = useState(false);
+  const history = useHistory();
+  const backToLogin = () => {
+    setTimeout(() => {
+      history.push("/login");
+    }, 1000);
+  };
+  const [isChecked, setIsChecked] = useState(true);
   return (
     <Container className="d-flex m-auto justify-content-center h-80">
       <Formik
@@ -73,7 +80,7 @@ function RegisterForm() {
             <div className="pb-20">
               <i className="fa fa-user icon position-absolute"></i>
               <Field
-                className="w-100 tid-15 "
+                className="w-100 tid-15 h-50 b-r99 bw-0"
                 name="username"
                 placeholder="Tên tài khoản"
               />
@@ -84,7 +91,7 @@ function RegisterForm() {
             <div className="pb-20">
               <i className="fas fa-key icon position-absolute"></i>
               <Field
-                className="w-100 tid-15"
+                className="w-100 tid-15 h-50 b-r99 bw-0"
                 name="email"
                 placeholder="Email"
               />
@@ -93,20 +100,20 @@ function RegisterForm() {
             <div className="pb-20">
               <i className="fas fa-key icon position-absolute"></i>
               <Field
-                className="w-100 tid-15"
+                className="w-100 tid-15 h-50 b-r99 bw-0"
                 name="password"
                 placeholder="Mật khẩu"
                 type={isChecked ? "text" : "password"}
               />
+              {errors.password && touched.password ? (
+                <div>{errors.password}</div>
+              ) : null}
               <input
                 type="checkbox"
                 onChange={(e) => setIsChecked(e.target.checked)}
                 checked={isChecked}
               />
               Show Password
-              {errors.password && touched.password ? (
-                <div>{errors.password}</div>
-              ) : null}
             </div>
             <div className="password-progess-bar d-flex justify-content-between align-items-baseline pb-10">
               <div>
@@ -121,11 +128,11 @@ function RegisterForm() {
               </ProgressBar>
             </div>
             <div className="password-progess-bar-input d-flex justify-content-between">
-              <Button className="mw-150" type="submit">
-                TẠO TÀI KHOẢN
-              </Button>
-              <Button className="mw-150" type="submit">
+              <Button className="mw-150 h-50 b-r99" onClick={backToLogin}>
                 ĐĂNG NHẬP
+              </Button>
+              <Button className="mw-150 h-50 b-r99" type="submit">
+                TẠO TÀI KHOẢN
               </Button>
             </div>
             <div className="position-absolute bottom-0 ml-60">

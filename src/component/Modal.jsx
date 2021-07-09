@@ -36,7 +36,6 @@ function MyVerticallyCenteredModal(props) {
 
   const fileHandler = (e) => {
     setFile(e.target.files[0]);
-    console.log("KHDHAAHSHSHAS", file);
   };
   return (
     <Modal
@@ -62,44 +61,57 @@ function MyVerticallyCenteredModal(props) {
         }}
         validationSchema={SignupSchema}
         onSubmit={(values) => {
-          const img = file;
+          const img = URL.createObjectURL(file);
           console.log("img", img);
           const valuess = { ...values, img };
           console.log("valuess", valuess);
-          console.log("AHJSHSASHAHAS", values);
+          console.log("AHJSHSASHAHAS", valuess);
           props.addProduct(valuess);
         }}
       >
         {({ errors, touched }) => (
           <Form>
             <div className="d-flex modal-body">
-              <div className="addvalue-dashboard-left d-flex flex-column">
+              <div className="addvalue-dashboard-left d-flex flex-column b-r99">
                 <label htmlFor="productName">Tên sản phẩm</label>
-                <Field name="productName" />
+                <Field className=" b-r99" name="productName" />
                 {errors.productName && touched.productName ? (
                   <div>{errors.productName}</div>
                 ) : null}
 
                 <label htmlFor="firstName">Tên viết tắt</label>
-                <Field name="productShortName" />
+                <Field className=" b-r99" name="productShortName" />
                 {errors.productShortName && touched.productShortName ? (
                   <div>{errors.productShortName}</div>
                 ) : null}
 
                 <label htmlFor="firstName">Vị trí đặt sản phẩm</label>
-                <Field name="productPlace" type="productPlace" />
+                <Field
+                  className=" b-r99"
+                  name="productPlace"
+                  type="productPlace"
+                />
                 {errors.productPlace && touched.productPlace ? (
                   <div>{errors.productPlace}</div>
                 ) : null}
 
                 <label htmlFor="firstName">Hạn sử dung sản phẩm</label>
-                <Field name="productExp" type="date"></Field>
+                <Field
+                  className=" b-r99 h-25"
+                  name="productExp"
+                  type="date"
+                ></Field>
                 {errors.productExp && touched.productExp ? (
                   <div>{errors.productExp}</div>
                 ) : null}
 
                 <label htmlFor="firstName">Lựa chọn công dụng</label>
-                <Field as="select" name="productUse" type="productUse">
+                <Field
+                  className=" b-r99 h-25 b1"
+                  as="select"
+                  name="productUse"
+                  type="productUse"
+                >
                   <option value="Trang Trí">Trang Trí</option>
                   <option value="Trang Trí 2">Trang Trí 2</option>
                   <option value="Trang Trí 3">Trang Trí 3</option>
@@ -115,6 +127,7 @@ function MyVerticallyCenteredModal(props) {
               </div>
               <div className="addvalue-dashboard-right">
                 <img
+                  className="addvalue-dashboard-right-img"
                   src={file ? URL.createObjectURL(file) : null}
                   alt={file ? file.name : null}
                   width="100%"
